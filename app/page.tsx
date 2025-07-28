@@ -86,61 +86,113 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Portfolio Preview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Recent Work</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our latest tattoo creations and see the quality of our artistry
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { src: "/portfolio-images/IMG_8460.png", alt: "Black ink snake tattoo with floral elements" },
+              { src: "/portfolio-images/IMG_8465.png", alt: "Detailed tattoo work" },
+              { src: "/portfolio-images/IMG_8467.png", alt: "Custom tattoo design by our artists" },
+              { src: "/portfolio-images/IMG_8470.png", alt: "Detailed tattoo craftsmanship" },
+            ].map((image, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-0">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Button size="lg" asChild>
+              <Link href="/gallery">View Full Gallery</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Artists Preview */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Ink & Steel?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Meet Our Artists</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We combine artistic excellence with the highest standards of safety and professionalism
+              Talented professionals dedicated to creating exceptional body art
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Palette className="w-8 h-8 text-primary" />
+              <CardContent className="pt-4">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="/artist-portraits/Maya Rodriguez.png"
+                    alt="Maya Rodriguez"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                <CardTitle>Custom Artistry</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Every tattoo is a unique masterpiece. Our artists work closely with you to bring your vision to life
-                  with exceptional detail and creativity.
-                </CardDescription>
+                <h3 className="text-xl font-bold mb-2">Maya Rodriguez</h3>
+                <p className="text-primary font-medium mb-4">Lead Artist & Owner</p>
+                <p className="text-muted-foreground mb-4">
+                  Specializing in realism, portraits, and fine line work. 8+ years of experience creating stunning,
+                  detailed pieces.
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <Badge variant="secondary">Realism</Badge>
+                  <Badge variant="secondary">Portraits</Badge>
+                  <Badge variant="secondary">Fine Line</Badge>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-primary" />
+              <CardContent className="pt-4">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="/artist-portraits/Zane Mitchell.png"
+                    alt="Zane Mitchell"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                <CardTitle>Safety First</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  We maintain the highest standards of cleanliness and safety. All equipment is sterilized, and we
-                  follow strict health department guidelines.
-                </CardDescription>
+                <h3 className="text-xl font-bold mb-2">Zane Mitchell</h3>
+                <p className="text-primary font-medium mb-4">Senior Artist</p>
+                <p className="text-muted-foreground mb-4">
+                  Master of traditional and neo-traditional styles. Known for bold lines, vibrant colors, and timeless
+                  designs.
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <Badge variant="secondary">Traditional</Badge>
+                  <Badge variant="secondary">Neo-Traditional</Badge>
+                  <Badge variant="secondary">Color Work</Badge>
+                </div>
               </CardContent>
             </Card>
+          </div>
 
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle>Expert Artists</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Our team consists of award-winning artists with years of experience in various styles, from
-                  traditional to photorealistic work.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          <div className="text-center mt-12">
+            <Button size="lg" asChild>
+              <Link href="/artists">Meet All Artists</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -203,68 +255,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Artists Preview */}
+      {/* Features Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Meet Our Artists</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Ink & Steel?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Talented professionals dedicated to creating exceptional body art
+              We combine artistic excellence with the highest standards of safety and professionalism
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=200&width=200"
-                    alt="Maya Rodriguez"
-                    className="w-full h-full object-cover"
-                  />
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Palette className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Maya Rodriguez</h3>
-                <p className="text-primary font-medium mb-4">Lead Artist & Owner</p>
-                <p className="text-muted-foreground mb-4">
-                  Specializing in realism, portraits, and fine line work. 8+ years of experience creating stunning,
-                  detailed pieces.
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Realism</Badge>
-                  <Badge variant="secondary">Portraits</Badge>
-                  <Badge variant="secondary">Fine Line</Badge>
-                </div>
+                <CardTitle>Custom Artistry</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Every tattoo is a unique masterpiece. Our artists work closely with you to bring your vision to life
+                  with exceptional detail and creativity.
+                </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="text-center border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=200&width=200"
-                    alt="Zane Mitchell"
-                    className="w-full h-full object-cover"
-                  />
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Zane Mitchell</h3>
-                <p className="text-primary font-medium mb-4">Senior Artist</p>
-                <p className="text-muted-foreground mb-4">
-                  Master of traditional and neo-traditional styles. Known for bold lines, vibrant colors, and timeless
-                  designs.
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Traditional</Badge>
-                  <Badge variant="secondary">Neo-Traditional</Badge>
-                  <Badge variant="secondary">Color Work</Badge>
-                </div>
+                <CardTitle>Safety First</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  We maintain the highest standards of cleanliness and safety. All equipment is sterilized, and we
+                  follow strict health department guidelines.
+                </CardDescription>
               </CardContent>
             </Card>
-          </div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" asChild>
-              <Link href="/artists">Meet All Artists</Link>
-            </Button>
+            <Card className="text-center border-0 shadow-lg">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle>Expert Artists</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Our team consists of award-winning artists with years of experience in various styles, from
+                  traditional to photorealistic work.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -282,49 +327,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Portfolio Preview */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Recent Work</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our latest tattoo creations and see the quality of our artistry
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              { src: "/portfolio-images/IMG_8460.png", alt: "Black ink snake tattoo with floral elements" },
-              { src: "/portfolio-images/IMG_8465.png", alt: "Detailed tattoo work" },
-              { src: "/portfolio-images/IMG_8467.png", alt: "Custom tattoo design by our artists" },
-              { src: "/portfolio-images/IMG_8470.png", alt: "Detailed tattoo craftsmanship" },
-            ].map((image, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="relative aspect-square">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Button size="lg" asChild>
-              <Link href="/gallery">View Full Gallery</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Location & Contact */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>

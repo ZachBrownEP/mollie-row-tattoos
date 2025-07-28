@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Calendar, Star, Clock, Palette } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -25,9 +26,15 @@ export default function ArtistsPage() {
             <div className="grid gap-8 md:grid-cols-2">
               {artists.map((artist) => (
                 <Card key={artist.id} className="overflow-hidden">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 h-32 w-32 rounded-full bg-gray-200 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-gray-600">{artist.name.charAt(0)}</span>
+                  <CardHeader className="text-center pb-4">
+                    <div className="mx-auto mb-2 h-32 w-32 rounded-full overflow-hidden">
+                      <Image
+                        src={`/artist-portraits/${artist.name}.png`}
+                        alt={artist.name}
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
                     <CardTitle className="text-2xl">{artist.name}</CardTitle>
                     <p className="text-muted-foreground">{artist.title}</p>
