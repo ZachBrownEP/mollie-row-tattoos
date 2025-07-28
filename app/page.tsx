@@ -98,8 +98,8 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
-              { src: "/portfolio-images/IMG_8460.png", alt: "Black ink snake tattoo with floral elements" },
               { src: "/portfolio-images/IMG_8465.png", alt: "Detailed tattoo work" },
+              { src: "/portfolio-images/IMG_8460.png", alt: "Black ink snake tattoo with floral elements" },
               { src: "/portfolio-images/IMG_8467.png", alt: "Custom tattoo design by our artists" },
               { src: "/portfolio-images/IMG_8470.png", alt: "Detailed tattoo craftsmanship" },
             ].map((image, index) => (
