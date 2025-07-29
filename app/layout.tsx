@@ -10,9 +10,9 @@ import ThemeSwitcher from "@/components/theme-switcher"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Kaylas Ink - Houston's Premier Tattoo Artists",
+  title: "Yuyuicy Ink - Chicago's Premier Tattoo Artists",
   description:
-    "Professional tattoo artistry in Houston, TX. Custom tattoos, cover-ups, and piercings by award-winning artists in a clean, safe environment.",
+    "Professional tattoo artistry in Chicago, IL. Custom tattoos, cover-ups, and piercings by award-winning artists in a clean, safe environment.",
     generator: 'v0.dev'
 }
 

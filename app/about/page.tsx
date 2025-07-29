@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">About Us</h1>
-            <p className="text-lg">The story behind Kaylas Ink</p>
+            <p className="text-lg">The story behind Yuyuicy Ink</p>
           </div>
         </div>
       </section>
@@ -23,8 +23,8 @@ export default function AboutPage() {
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold">Where Art Meets Skin</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                At Kaylas Ink, we believe that tattoos are more than just body art—they're personal
-                stories, memories, and expressions of identity. Located in the vibrant heart of Houston, we've been
+                At Yuyuicy Ink, we believe that tattoos are more than just body art—they're personal
+                stories, memories, and expressions of identity. Located in the vibrant heart of Chicago, we've been
                 serving the community with exceptional tattoo artistry, professional piercings, and custom designs that
                 honor both traditional techniques and contemporary innovation.
               </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <h2 className="mb-6 text-2xl font-bold">Our Story</h2>
               <div className="prose max-w-none text-muted-foreground">
                 <p className="mb-4">
-                  Founded in 2018 by a collective of passionate tattoo artists, Kaylas Ink was born from
+                  Founded in 2018 by a collective of passionate tattoo artists, Yuyuicy Ink was born from
                   a shared vision of creating a space where artistry, professionalism, and client care converge. Our
                   name reflects our commitment to personal expression and artistic excellence.
                 </p>
@@ -133,7 +133,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h2 className="mb-4 text-2xl font-bold">Ready to Create Something Amazing?</h2>
               <p className="mb-6 text-muted-foreground">
-                Book your consultation today and discover why we're Houston's premier tattoo studio.
+                Book your consultation today and discover why we're Chicago's premier tattoo studio.
               </p>
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <Link href="/artists">Book Your Artist</Link>

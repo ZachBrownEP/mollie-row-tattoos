@@ -26,7 +26,7 @@ export default function GalleryPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Our Work</h1>
-            <p className="text-lg">Showcasing the artistry and craftsmanship that defines Kaylas Ink</p>
+            <p className="text-lg">Showcasing the artistry and craftsmanship that defines Yuyuicy Ink</p>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function GalleryPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Professional Tattoo Art</h3>
-                <p className="text-muted-foreground">Expert artistry by the Kaylas Ink team</p>
+                <p className="text-muted-foreground">Expert artistry by the Yuyuicy Ink team</p>
               </div>
             </div>
           </div>
@@ -115,17 +115,17 @@ export default function GalleryPage() {
 const galleryImages = [
   {
     id: 1,
-    src: "/portfolio-images/IMG_8514.png",
-    alt: "Custom tattoo artwork by Kaylas Ink",
+    src: "/portfolio-images/IMG_8531.png",
+    alt: "Custom tattoo artwork by Yuyuicy Ink",
   },
   {
     id: 2,
-    src: "/portfolio-images/IMG_8515.png",
+    src: "/portfolio-images/IMG_8532.png",
     alt: "Fine line tattoo work",
   },
   {
     id: 3,
-    src: "/portfolio-images/IMG_8516.png",
+    src: "/portfolio-images/IMG_8533.png",
     alt: "Artistic tattoo design",
   },
 ]

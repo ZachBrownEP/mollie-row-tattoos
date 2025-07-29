@@ -11,7 +11,7 @@ interface GoogleMapProps {
 
 export default function GoogleMap({
   apiKey = "AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM",
-  address = "10190 Katy Freeway, Houston, TX 77043",
+  address = "1550 N Mason, Chicago, Illinois",
   className = "h-96",
 }: GoogleMapProps) {
   const encodedAddress = encodeURIComponent(address)

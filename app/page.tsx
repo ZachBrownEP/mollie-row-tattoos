@@ -38,13 +38,13 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Badge variant="outline" className="w-fit">
                   <Zap className="w-3 h-3 mr-1" />
-                  Houston's Premier Tattoo Studio
+                  Chicago's Premier Tattoo Studio
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
                   Where Art Meets <span className="text-primary">Skin</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
-                  Your Vision, Our Craft. Experience premium tattoo artistry with Austin's most talented artists in a
+                  Your Vision, Our Craft. Experience premium tattoo artistry with Chicago's most talented artists in a
                   clean, professional environment.
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-semibold">Award Winning</div>
-                    <div className="text-sm text-muted-foreground">Houston's Best Tattoo Studio 2024</div>
+                    <div className="text-sm text-muted-foreground">Chicago's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -98,9 +98,9 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { src: "/portfolio-images/IMG_8514.png", alt: "Custom tattoo artwork by Kaylas Ink" },
-              { src: "/portfolio-images/IMG_8515.png", alt: "Fine line tattoo work" },
-              { src: "/portfolio-images/IMG_8516.png", alt: "Artistic tattoo design" },
+              { src: "/portfolio-images/IMG_8531.png", alt: "Custom tattoo artwork by Yuyuicy Ink" },
+              { src: "/portfolio-images/IMG_8532.png", alt: "Fine line tattoo work" },
+              { src: "/portfolio-images/IMG_8533.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
@@ -126,13 +126,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Artists Preview */}
+      {/* Artist Preview */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Meet Our Artists</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Meet Your Artist</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Talented professionals dedicated to creating exceptional body art
+              Dedicated to creating exceptional body art that tells your story
             </p>
           </div>
 
@@ -141,15 +141,15 @@ export default function HomePage() {
               <CardContent className="pt-4">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/artist-portraits/Brooke Riverra.png"
-                    alt="Brooke Riverra"
+                    src="/artist-portraits/Yuyuicy.png"
+                    alt="Yuyuicy"
                     width={200}
                     height={200}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Brooke Riverra</h3>
-                <p className="text-primary font-medium mb-4">Lead Artist & Owner</p>
+                <h3 className="text-xl font-bold mb-2">Yuyuicy</h3>
+                <p className="text-primary font-medium mb-4">Artist & Owner</p>
                 <p className="text-muted-foreground mb-4">
                   Specializing in custom designs, fine line work, and artistic tattoos. Passionate about creating unique,
                   meaningful pieces for each client.
@@ -165,7 +165,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <Button size="lg" asChild>
-              <Link href="/artists">Meet All Artists</Link>
+              <Link href="/booking">Book a Consultation</Link>
             </Button>
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function HomePage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Kaylas Ink?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Yuyuicy Ink?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>
@@ -316,11 +316,9 @@ export default function HomePage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      10190 Katy Freeway
+                      1550 N Mason
                       <br />
-                      Houston, TX 77043
-                      <br />
-                      Floor 3, Suite 355
+                      Chicago, Illinois
                     </p>
                   </div>
                 </div>
@@ -347,7 +345,7 @@ export default function HomePage() {
                     <p className="text-muted-foreground">
                       Phone: (512) 555-0123
                       <br />
-                      Email: info@kaylasink.com
+                      Email: info@yuyuicyink.com
                     </p>
                   </div>
                 </div>
@@ -374,10 +372,10 @@ export default function HomePage() {
             <div>
               <h3 className="mb-4 flex items-center text-xl font-bold">
                 <Zap className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-primary">Kaylas Ink</span>
+                <span className="text-primary">Yuyuicy Ink</span>
               </h3>
               <p className="mb-2">Professional Tattoo Artistry</p>
-              <p className="mb-4">Houston, TX</p>
+              <p className="mb-4">Chicago, IL</p>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Services</h3>
@@ -431,23 +429,22 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact</h3>
-              <p className="mb-2">10190 Katy Freeway</p>
-              <p className="mb-2">Houston, TX 77043</p>
-              <p className="mb-2">Floor 3, Suite 355</p>
+              <p className="mb-2">1550 N Mason</p>
+              <p className="mb-2">Chicago, Illinois</p>
               <p className="mb-2">(512) 555-0123</p>
               <p className="mb-4">Hours: Tue-Sat 12PM-8PM</p>
               <div className="space-y-2">
                 <Link href="/contact" className="block text-primary hover:underline">
                   Get Directions
                 </Link>
-                <a href="https://www.instagram.com/kaylas.ink/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                <a href="https://www.instagram.com/yuyuicyink/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
                   Follow us on Instagram
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-8 border-t border-neutral-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} Kaylas Ink. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Yuyuicy Ink. All rights reserved.</p>
           </div>
         </div>
       </footer>
