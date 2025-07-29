@@ -20,7 +20,7 @@ interface Theme {
 const themes: Theme[] = [
   {
     id: "ink-steel",
-    name: "Ink & Steel",
+    name: "Kaylas Ink",
     description: "Deep purples with metallic accents",
     colors: ["#8B5CF6", "#A855F7", "#C084FC"],
     cssVars: {

@@ -11,7 +11,7 @@ interface GoogleMapProps {
 
 export default function GoogleMap({
   apiKey = "AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM",
-  address = "1247 South Lamar Blvd, Austin, TX 78704",
+  address = "10190 Katy Freeway, Houston, TX 77043",
   className = "h-96",
 }: GoogleMapProps) {
   const encodedAddress = encodeURIComponent(address)

@@ -11,15 +11,15 @@ import GoogleMap from "@/google-map"
 const testimonials = [
   {
     name: "Sarah K.",
-    text: "Maya did an incredible portrait tattoo of my grandmother. The detail and emotion she captured is breathtaking!",
+    text: "Brooke did an amazing custom piece for me. Her artistic vision and attention to detail is incredible!",
   },
   {
     name: "Marcus T.",
-    text: "Zane's traditional work is unmatched. Clean lines, bold colors, and perfect execution every time.",
+    text: "The fine line work is absolutely perfect. Clean, precise, and exactly what I envisioned.",
   },
   {
     name: "Jessica L.",
-    text: "Professional, clean, and talented artists. This is the only place I trust with my ink.",
+    text: "Professional, clean, and talented artist. This is the only place I trust with my ink.",
   },
   {
     name: "David R.",
@@ -38,7 +38,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Badge variant="outline" className="w-fit">
                   <Zap className="w-3 h-3 mr-1" />
-                  Austin's Premier Tattoo Studio
+                  Houston's Premier Tattoo Studio
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
                   Where Art Meets <span className="text-primary">Skin</span>
@@ -77,7 +77,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-semibold">Award Winning</div>
-                    <div className="text-sm text-muted-foreground">Austin's Best Tattoo Studio 2024</div>
+                    <div className="text-sm text-muted-foreground">Houston's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -96,12 +96,11 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { src: "/portfolio-images/IMG_8465.png", alt: "Detailed tattoo work" },
-              { src: "/portfolio-images/IMG_8460.png", alt: "Black ink snake tattoo with floral elements" },
-              { src: "/portfolio-images/IMG_8467.png", alt: "Custom tattoo design by our artists" },
-              { src: "/portfolio-images/IMG_8470.png", alt: "Detailed tattoo craftsmanship" },
+              { src: "/portfolio-images/IMG_8514.png", alt: "Custom tattoo artwork by Kaylas Ink" },
+              { src: "/portfolio-images/IMG_8515.png", alt: "Fine line tattoo work" },
+              { src: "/portfolio-images/IMG_8516.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
@@ -137,53 +136,28 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="max-w-md mx-auto">
             <Card className="text-center border-0 shadow-lg">
               <CardContent className="pt-4">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/artist-portraits/Maya Rodriguez.png"
-                    alt="Maya Rodriguez"
+                    src="/artist-portraits/Brooke Riverra.png"
+                    alt="Brooke Riverra"
                     width={200}
                     height={200}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Maya Rodriguez</h3>
+                <h3 className="text-xl font-bold mb-2">Brooke Riverra</h3>
                 <p className="text-primary font-medium mb-4">Lead Artist & Owner</p>
                 <p className="text-muted-foreground mb-4">
-                  Specializing in realism, portraits, and fine line work. 8+ years of experience creating stunning,
-                  detailed pieces.
+                  Specializing in custom designs, fine line work, and artistic tattoos. Passionate about creating unique,
+                  meaningful pieces for each client.
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Realism</Badge>
-                  <Badge variant="secondary">Portraits</Badge>
+                  <Badge variant="secondary">Custom Designs</Badge>
                   <Badge variant="secondary">Fine Line</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 shadow-lg">
-              <CardContent className="pt-4">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/artist-portraits/Zane Mitchell.png"
-                    alt="Zane Mitchell"
-                    width={200}
-                    height={200}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Zane Mitchell</h3>
-                <p className="text-primary font-medium mb-4">Senior Artist</p>
-                <p className="text-muted-foreground mb-4">
-                  Master of traditional and neo-traditional styles. Known for bold lines, vibrant colors, and timeless
-                  designs.
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Traditional</Badge>
-                  <Badge variant="secondary">Neo-Traditional</Badge>
-                  <Badge variant="secondary">Color Work</Badge>
+                  <Badge variant="secondary">Artistic Tattoos</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -259,7 +233,7 @@ export default function HomePage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Ink & Steel?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Kaylas Ink?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>
@@ -342,9 +316,11 @@ export default function HomePage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      1247 South Lamar Blvd
+                      10190 Katy Freeway
                       <br />
-                      Austin, TX 78704
+                      Houston, TX 77043
+                      <br />
+                      Floor 3, Suite 355
                     </p>
                   </div>
                 </div>
@@ -371,7 +347,7 @@ export default function HomePage() {
                     <p className="text-muted-foreground">
                       Phone: (512) 555-0123
                       <br />
-                      Email: info@inkandsteeltattoo.com
+                      Email: info@kaylasink.com
                     </p>
                   </div>
                 </div>
@@ -398,13 +374,10 @@ export default function HomePage() {
             <div>
               <h3 className="mb-4 flex items-center text-xl font-bold">
                 <Zap className="mr-2 h-5 w-5 text-primary" />
-                <span>
-                  <span className="text-primary">Ink & Steel</span>
-                  <span className="italic"> Tattoo Studio</span>
-                </span>
+                <span className="text-primary">Kaylas Ink</span>
               </h3>
               <p className="mb-2">Professional Tattoo Artistry</p>
-              <p className="mb-4">Austin, TX</p>
+              <p className="mb-4">Houston, TX</p>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Services</h3>
@@ -458,17 +431,23 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact</h3>
-              <p className="mb-2">1247 South Lamar Blvd</p>
-              <p className="mb-2">Austin, TX 78704</p>
+              <p className="mb-2">10190 Katy Freeway</p>
+              <p className="mb-2">Houston, TX 77043</p>
+              <p className="mb-2">Floor 3, Suite 355</p>
               <p className="mb-2">(512) 555-0123</p>
               <p className="mb-4">Hours: Tue-Sat 12PM-8PM</p>
-              <Link href="/contact" className="text-primary hover:underline">
-                Get Directions
-              </Link>
+              <div className="space-y-2">
+                <Link href="/contact" className="block text-primary hover:underline">
+                  Get Directions
+                </Link>
+                <a href="https://www.instagram.com/kaylas.ink/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                  Follow us on Instagram
+                </a>
+              </div>
             </div>
           </div>
           <div className="mt-8 border-t border-neutral-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} Ink & Steel Tattoo Studio. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Kaylas Ink. All rights reserved.</p>
           </div>
         </div>
       </footer>

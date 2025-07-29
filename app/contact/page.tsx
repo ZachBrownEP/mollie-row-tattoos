@@ -30,11 +30,12 @@ export default function ContactPage() {
                     <MapPin className="mt-1 h-5 w-5 text-primary" />
                     <div>
                       <h3 className="font-semibold">Address</h3>
-                      <p className="mt-1 text-muted-foreground">1247 South Lamar Blvd</p>
-                      <p className="text-muted-foreground">Austin, TX 78704</p>
+                      <p className="mt-1 text-muted-foreground">10190 Katy Freeway</p>
+                      <p className="text-muted-foreground">Houston, TX 77043</p>
+                      <p className="text-muted-foreground">Floor 3, Suite 355</p>
                       <Button variant="link" className="mt-2 h-auto p-0 text-primary hover:text-primary/80" asChild>
                         <a
-                          href="https://maps.google.com/?q=1247+South+Lamar+Blvd,+Austin,+TX+78704"
+                          href="https://maps.google.com/?q=10190+Katy+Freeway,+Houston,+TX+77043"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -63,7 +64,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold">Email</h3>
                       <p className="mt-1 text-muted-foreground">Send us a message</p>
-                      <p className="text-lg font-semibold">info@inkandsteeltattoo.com</p>
+                      <p className="text-lg font-semibold">info@kaylasink.com</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -78,6 +79,20 @@ export default function ContactPage() {
                         <p>Sunday - Monday: Closed</p>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mt-8">
+                <h3 className="mb-4 text-xl font-bold">Follow Us</h3>
+                <Card>
+                  <CardContent className="p-6">
+                    <p className="mb-4 text-sm text-muted-foreground">
+                      Stay updated with our latest work and announcements on Instagram.
+                    </p>
+                    <a href="https://www.instagram.com/kaylas.ink/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                      @kaylas.ink on Instagram
+                    </a>
                   </CardContent>
                 </Card>
               </div>
@@ -157,12 +172,12 @@ export default function ContactPage() {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <GoogleMap
                 apiKey="AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM"
-                address="1247 South Lamar Blvd, Austin, TX 78704"
+                address="10190 Katy Freeway, Houston, TX 77043"
                 className="h-96"
               />
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-muted-foreground">1247 South Lamar Blvd, Austin, TX 78704</p>
+              <p className="text-sm text-muted-foreground">10190 Katy Freeway, Houston, TX 77043, Floor 3 Suite 355</p>
             </div>
           </div>
         </div>

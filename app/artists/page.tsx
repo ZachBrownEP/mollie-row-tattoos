@@ -23,7 +23,7 @@ export default function ArtistsPage() {
       <section className="py-16">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-4xl">
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="max-w-md mx-auto">
               {artists.map((artist) => (
                 <Card key={artist.id} className="overflow-hidden">
                   <CardHeader className="text-center pb-4">
@@ -145,41 +145,22 @@ export default function ArtistsPage() {
 
 const artists = [
   {
-    id: "maya",
-    name: "Maya Rodriguez",
-    title: "Lead Tattoo Artist",
-    specialties: ["Realism", "Portraits", "Black & Grey", "Fine Line"],
+    id: "brooke",
+    name: "Brooke Riverra",
+    title: "Lead Tattoo Artist & Owner",
+    specialties: ["Custom Designs", "Fine Line", "Artistic Tattoos", "Color Work"],
     rating: "4.9",
-    reviews: "200+",
-    experience: "8+ years experience",
+    reviews: "150+",
+    experience: "10+ years experience",
     startingPrice: "150",
-    bio: "Maya specializes in photorealistic portraits and detailed black & grey work. Her attention to detail and ability to capture emotion in her pieces has made her one of Austin's most sought-after artists.",
+    bio: "Brooke is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
     services: [
-      "Portrait Tattoos",
-      "Realism Work",
-      "Black & Grey Pieces",
-      "Fine Line Tattoos",
-      "Memorial Tattoos",
-      "Custom Designs",
-    ],
-  },
-  {
-    id: "zane",
-    name: "Zane Mitchell",
-    title: "Senior Tattoo Artist",
-    specialties: ["Traditional", "Neo-Traditional", "Color Work", "Japanese"],
-    rating: "4.8",
-    reviews: "180+",
-    experience: "12+ years experience",
-    startingPrice: "140",
-    bio: "Zane brings over a decade of experience in traditional and neo-traditional tattooing. His bold use of color and clean line work creates timeless pieces that stand the test of time.",
-    services: [
-      "Traditional Tattoos",
-      "Neo-Traditional Work",
-      "Japanese Style",
+      "Custom Tattoo Designs",
+      "Fine Line Work",
+      "Artistic Pieces",
       "Color Tattoos",
-      "Flash Designs",
       "Cover-Up Work",
+      "Consultation & Design",
     ],
   },
 ]
