@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Clock, Phone, Zap, Palette, Shield, Award } from "lucide-react"
+import { MapPin, Clock, Phone, Zap, Palette, Shield, Award, Instagram } from "lucide-react"
 import TestimonialSlider from "@/testimonial-slider"
 import GoogleMap from "@/google-map"
 
@@ -38,13 +38,13 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Badge variant="outline" className="w-fit">
                   <Zap className="w-3 h-3 mr-1" />
-                  Chicago's Premier Tattoo Studio
+                  Tempe's Premier Tattoo Studio
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
                   Where Art Meets <span className="text-primary">Skin</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
-                  Your Vision, Our Craft. Experience premium tattoo artistry with Chicago's most talented artists in a
+                  Your Vision, Our Craft. Experience premium tattoo artistry with Keon Ostby in a
                   clean, professional environment.
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-semibold">Award Winning</div>
-                    <div className="text-sm text-muted-foreground">Chicago's Best Tattoo Studio 2024</div>
+                    <div className="text-sm text-muted-foreground">Tempe's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -98,9 +98,9 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { src: "/portfolio-images/IMG_8531.png", alt: "Custom tattoo artwork by Yuyuicy Ink" },
-              { src: "/portfolio-images/IMG_8532.png", alt: "Fine line tattoo work" },
-              { src: "/portfolio-images/IMG_8533.png", alt: "Artistic tattoo design" },
+              { src: "/portfolio-images/IMG_8585.png", alt: "Custom tattoo artwork by Ponyboy Tattoos" },
+              { src: "/portfolio-images/IMG_8586.png", alt: "Fine line tattoo work" },
+              { src: "/portfolio-images/IMG_8588.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
@@ -141,14 +141,14 @@ export default function HomePage() {
               <CardContent className="pt-4">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/artist-portraits/Yuyuicy.png"
-                    alt="Yuyuicy"
+                    src="/artist-portraits/IMG_8589.png"
+                    alt="Keon Ostby"
                     width={200}
                     height={200}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Yuyuicy</h3>
+                <h3 className="text-xl font-bold mb-2">Keon Ostby</h3>
                 <p className="text-primary font-medium mb-4">Artist & Owner</p>
                 <p className="text-muted-foreground mb-4">
                   Specializing in custom designs, fine line work, and artistic tattoos. Passionate about creating unique,
@@ -163,10 +163,18 @@ export default function HomePage() {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 space-y-4">
             <Button size="lg" asChild>
               <Link href="/booking">Book a Consultation</Link>
             </Button>
+            <div>
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://www.instagram.com/ponyboytattoos/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Instagram className="h-5 w-5" />
+                  <span>Follow @ponyboytattoos</span>
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -233,7 +241,7 @@ export default function HomePage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Yuyuicy Ink?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Ponyboy Tattoos?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>
@@ -316,9 +324,7 @@ export default function HomePage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      1550 N Mason
-                      <br />
-                      Chicago, Illinois
+                      Tempe, Arizona
                     </p>
                   </div>
                 </div>
@@ -345,7 +351,7 @@ export default function HomePage() {
                     <p className="text-muted-foreground">
                       Phone: (512) 555-0123
                       <br />
-                      Email: info@yuyuicyink.com
+                      Email: info@ponyboytattoos.com
                     </p>
                   </div>
                 </div>
@@ -372,10 +378,10 @@ export default function HomePage() {
             <div>
               <h3 className="mb-4 flex items-center text-xl font-bold">
                 <Zap className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-primary">Yuyuicy Ink</span>
+                <span className="text-primary">Ponyboy Tattoos</span>
               </h3>
               <p className="mb-2">Professional Tattoo Artistry</p>
-              <p className="mb-4">Chicago, IL</p>
+              <p className="mb-4">Tempe, AZ</p>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Services</h3>
@@ -429,22 +435,21 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact</h3>
-              <p className="mb-2">1550 N Mason</p>
-              <p className="mb-2">Chicago, Illinois</p>
+              <p className="mb-2">Tempe, Arizona</p>
               <p className="mb-2">(512) 555-0123</p>
               <p className="mb-4">Hours: Tue-Sat 12PM-8PM</p>
               <div className="space-y-2">
                 <Link href="/contact" className="block text-primary hover:underline">
                   Get Directions
                 </Link>
-                <a href="https://www.instagram.com/yuyuicyink/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                <a href="https://www.instagram.com/ponyboytattoos/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
                   Follow us on Instagram
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-8 border-t border-neutral-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} Yuyuicy Ink. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Ponyboy Tattoos. All rights reserved.</p>
           </div>
         </div>
       </footer>

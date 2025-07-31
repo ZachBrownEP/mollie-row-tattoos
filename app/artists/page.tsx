@@ -14,7 +14,7 @@ export default function ArtistsPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Meet Your Artist</h1>
-            <p className="text-lg">Schedule your consultation with Yuyuicy</p>
+            <p className="text-lg">Schedule your consultation with Keon Ostby</p>
           </div>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function ArtistsPage() {
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-2 h-32 w-32 rounded-full overflow-hidden">
                     <Image
-                      src={`/artist-portraits/${artist.name}.png`}
+                      src={`/artist-portraits/IMG_8589.png`}
                       alt={artist.name}
                       width={200}
                       height={200}
@@ -142,15 +142,15 @@ export default function ArtistsPage() {
 }
 
 const artist = {
-  id: "yuyuicy",
-  name: "Yuyuicy",
+  id: "keon",
+  name: "Keon Ostby",
   title: "Tattoo Artist & Owner",
   specialties: ["Custom Designs", "Fine Line", "Artistic Tattoos", "Color Work"],
   rating: "4.9",
   reviews: "150+",
   experience: "10+ years experience",
   startingPrice: "150",
-  bio: "Yuyuicy is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
+  bio: "Keon Ostby is passionate about creating unique, meaningful tattoos that tell each client's personal story. His artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
   services: [
     "Custom Tattoo Designs",
     "Fine Line Work",
