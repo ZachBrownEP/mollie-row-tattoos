@@ -30,10 +30,10 @@ export default function ContactPage() {
                     <MapPin className="mt-1 h-5 w-5 text-primary" />
                     <div>
                       <h3 className="font-semibold">Address</h3>
-                      <p className="mt-1 text-muted-foreground">Tempe, Arizona</p>
+                      <p className="mt-1 text-muted-foreground">Phoenix, Arizona</p>
                       <Button variant="link" className="mt-2 h-auto p-0 text-primary hover:text-primary/80" asChild>
                         <a
-                          href="https://maps.google.com/?q=Tempe,+Arizona"
+                          href="https://maps.google.com/?q=Phoenix,+Arizona"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold">Email</h3>
                       <p className="mt-1 text-muted-foreground">Send us a message</p>
-                      <p className="text-lg font-semibold">info@ponyboytattoos.com</p>
+                      <p className="text-lg font-semibold">info@sugstattoos.com</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -88,8 +88,8 @@ export default function ContactPage() {
                     <p className="mb-4 text-sm text-muted-foreground">
                       Stay updated with our latest work and announcements on Instagram.
                     </p>
-                    <a href="https://www.instagram.com/ponyboytattoos/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-                      @ponyboytattoos on Instagram
+                    <a href="https://www.instagram.com/sugs_/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                      @sugs_ on Instagram
                     </a>
                   </CardContent>
                 </Card>
@@ -170,12 +170,12 @@ export default function ContactPage() {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <GoogleMap
                 apiKey="AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM"
-                address="Tempe, Arizona"
+                address="Phoenix, Arizona"
                 className="h-96"
               />
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-muted-foreground">Tempe, Arizona</p>
+              <p className="text-sm text-muted-foreground">Phoenix, Arizona</p>
             </div>
           </div>
         </div>

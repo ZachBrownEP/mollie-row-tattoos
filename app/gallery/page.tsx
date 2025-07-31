@@ -26,7 +26,7 @@ export default function GalleryPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Our Work</h1>
-            <p className="text-lg">Showcasing the artistry and craftsmanship that defines Ponyboy Tattoos</p>
+            <p className="text-lg">Showcasing the artistry and craftsmanship that defines Sugs Tattoos</p>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function GalleryPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Professional Tattoo Art</h3>
-                <p className="text-muted-foreground">Expert artistry by Keon Ostby</p>
+                <p className="text-muted-foreground">Expert artistry by Halee Hathaway</p>
               </div>
             </div>
           </div>
@@ -115,17 +115,17 @@ export default function GalleryPage() {
 const galleryImages = [
   {
     id: 1,
-    src: "/portfolio-images/IMG_8585.png",
-    alt: "Custom tattoo artwork by Ponyboy Tattoos",
+    src: "/portfolio-images/IMG_8601.png",
+    alt: "Custom tattoo artwork by Sugs Tattoos",
   },
   {
     id: 2,
-    src: "/portfolio-images/IMG_8586.png",
+    src: "/portfolio-images/IMG_8602.png",
     alt: "Fine line tattoo work",
   },
   {
     id: 3,
-    src: "/portfolio-images/IMG_8588.png",
+    src: "/portfolio-images/IMG_8605.png",
     alt: "Artistic tattoo design",
   },
 ]

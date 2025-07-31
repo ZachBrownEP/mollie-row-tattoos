@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Star, Clock, Palette } from "lucide-react"
+import { Calendar, Clock, Palette } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,7 +14,7 @@ export default function ArtistsPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Meet Your Artist</h1>
-            <p className="text-lg">Schedule your consultation with Keon Ostby</p>
+            <p className="text-lg">Schedule your consultation with Halee Hathaway</p>
           </div>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function ArtistsPage() {
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-2 h-32 w-32 rounded-full overflow-hidden">
                     <Image
-                      src={`/artist-portraits/IMG_8589.png`}
+                      src={`/artist-portraits/IMG_8600.png`}
                       alt={artist.name}
                       width={200}
                       height={200}
@@ -48,12 +48,6 @@ export default function ArtistsPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Star className="h-4 w-4 text-yellow-500" />
-                      <span className="text-sm">
-                        {artist.rating} rating • {artist.reviews} reviews
-                      </span>
-                    </div>
                     <div className="flex items-center gap-2">
                       <Clock className="h-4 w-4 text-muted-foreground" />
                       <span className="text-sm">{artist.experience}</span>
@@ -142,15 +136,15 @@ export default function ArtistsPage() {
 }
 
 const artist = {
-  id: "keon",
-  name: "Keon Ostby",
+  id: "halee",
+  name: "Halee Hathaway",
   title: "Tattoo Artist & Owner",
   specialties: ["Custom Designs", "Fine Line", "Artistic Tattoos", "Color Work"],
   rating: "4.9",
   reviews: "150+",
   experience: "10+ years experience",
   startingPrice: "150",
-  bio: "Keon Ostby is passionate about creating unique, meaningful tattoos that tell each client's personal story. His artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
+  bio: "Halee Hathaway is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
   services: [
     "Custom Tattoo Designs",
     "Fine Line Work",
