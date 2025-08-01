@@ -31,7 +31,7 @@ export default function SiteHeader() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Zap className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block">
-              <span className="text-primary">Sol De Noche Tatuajes</span>
+              <span className="text-primary">Risa Tattoos</span>
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -64,7 +64,7 @@ export default function SiteHeader() {
                 <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
                   <Zap className="mr-2 h-4 w-4 text-primary" />
                   <span className="font-bold">
-                    <span className="text-primary">Sol De Noche Tatuajes</span>
+                    <span className="text-primary">Risa Tattoos</span>
                   </span>
                 </Link>
               </SheetTitle>
@@ -92,7 +92,7 @@ export default function SiteHeader() {
             <Link href="/" className="flex items-center space-x-2 md:hidden">
               <Zap className="h-6 w-6 text-primary" />
               <span className="font-bold">
-                <span className="text-primary">Sol De Noche Tatuajes</span>
+                <span className="text-primary">Risa Tattoos</span>
               </span>
             </Link>
           </div>

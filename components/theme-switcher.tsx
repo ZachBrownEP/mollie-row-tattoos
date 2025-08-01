@@ -20,8 +20,8 @@ interface Theme {
 const themes: Theme[] = [
   {
     id: "default",
-    name: "Default (Black & White)",
-    description: "Classic black and white theme",
+    name: "Default",
+    description: "Classic theme that adapts to light/dark mode",
     colors: ["#000000", "#404040", "#808080"],
     cssVars: {
       primary: "240 5.9% 10%",
@@ -31,7 +31,7 @@ const themes: Theme[] = [
   },
   {
     id: "ink-steel",
-    name: "Sol De Noche Tatuajes",
+    name: "Risa Tattoos",
     description: "Deep purples with metallic accents",
     colors: ["#8B5CF6", "#A855F7", "#C084FC"],
     cssVars: {
@@ -245,18 +245,16 @@ export default function ThemeSwitcher() {
   const [currentTheme, setCurrentTheme] = useState("default")
 
   useEffect(() => {
-    // Always check localStorage on mount and reapply theme
+    // Only apply color theme if user has specifically chosen one
     const checkAndApplyTheme = () => {
       const savedTheme = localStorage.getItem("color-theme")
       if (savedTheme) {
         setCurrentTheme(savedTheme)
         applyTheme(savedTheme)
       } else {
-        // Apply default theme on first load
+        // Don't apply any color theme on first load - let the system use default styling
         setCurrentTheme("default")
-        applyTheme("default")
-        // Save default to localStorage
-        localStorage.setItem("color-theme", "default")
+        // Don't force apply the theme unless user explicitly selects it
       }
     }
 
@@ -279,18 +277,38 @@ export default function ThemeSwitcher() {
     if (!theme) return
 
     const root = document.documentElement
-    root.style.setProperty("--primary", theme.cssVars.primary)
-    root.style.setProperty("--primary-foreground", theme.cssVars.primaryForeground)
-    root.style.setProperty("--accent", theme.cssVars.accent)
     
-    // Set data attribute for theme-specific styling
-    root.setAttribute("data-theme", themeId)
+    // Only apply custom CSS properties for non-default themes
+    if (themeId !== "default") {
+      root.style.setProperty("--primary", theme.cssVars.primary)
+      root.style.setProperty("--primary-foreground", theme.cssVars.primaryForeground)
+      root.style.setProperty("--accent", theme.cssVars.accent)
+      root.setAttribute("data-theme", themeId)
+    } else {
+      // For default theme, remove custom properties to let CSS defaults work
+      root.style.removeProperty("--primary")
+      root.style.removeProperty("--primary-foreground")
+      root.style.removeProperty("--accent")
+      root.setAttribute("data-theme", "default")
+    }
   }
 
   const handleThemeChange = (themeId: string) => {
     setCurrentTheme(themeId)
     applyTheme(themeId)
-    localStorage.setItem("color-theme", themeId)
+    // Only save to localStorage if it's not the default theme
+    if (themeId !== "default") {
+      localStorage.setItem("color-theme", themeId)
+    } else {
+      // If selecting default, remove custom theme from localStorage
+      localStorage.removeItem("color-theme")
+      // Clear custom CSS properties to let the CSS defaults take over
+      const root = document.documentElement
+      root.style.removeProperty("--primary")
+      root.style.removeProperty("--primary-foreground")
+      root.style.removeProperty("--accent")
+      root.removeAttribute("data-theme")
+    }
     setIsOpen(false)
   }
 
