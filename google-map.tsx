@@ -11,7 +11,7 @@ interface GoogleMapProps {
 
 export default function GoogleMap({
   apiKey = "AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM",
-  address = "1550 N Mason, Chicago, Illinois",
+  address = "2505 SE 11TH Portland, OR",
   className = "h-96",
 }: GoogleMapProps) {
   const encodedAddress = encodeURIComponent(address)

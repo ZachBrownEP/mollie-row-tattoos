@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">About Us</h1>
-            <p className="text-lg">The story behind Sugs Tattoos</p>
+            <p className="text-lg">The story behind Sol De Noche Tatuajes</p>
           </div>
         </div>
       </section>
@@ -23,8 +23,8 @@ export default function AboutPage() {
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold">Where Art Meets Skin</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                At Sugs Tattoos, we believe that tattoos are more than just body art—they're personal
-                stories, memories, and expressions of identity. Located in the vibrant heart of Phoenix, we've been
+                At Sol De Noche Tatuajes, we believe that tattoos are more than just body art—they're personal
+                stories, memories, and expressions of identity. Located in the vibrant heart of Portland, we've been
                 serving the community with exceptional tattoo artistry and custom designs that
                 honor both traditional techniques and contemporary innovation.
               </p>
@@ -69,12 +69,12 @@ export default function AboutPage() {
               <h2 className="mb-6 text-2xl font-bold">Our Story</h2>
               <div className="prose max-w-none text-muted-foreground">
                 <p className="mb-4">
-                  Founded by Halee Hathaway, Sugs Tattoos was born from
+                  Founded by Maureen Orrissim, Sol De Noche Tatuajes was born from
                   a vision of creating a space where artistry, professionalism, and client care converge. Our
                   name reflects our commitment to personal expression and artistic excellence.
                 </p>
                 <p className="mb-4">
-                  Halee brings diverse experience and specialties, from photorealistic portraits to bold
+                  Maureen brings diverse experience and specialties, from photorealistic portraits to bold
                   traditional work, ensuring that every client finds their perfect artistic match. We pride ourselves on
                   maintaining a sterile, welcoming environment where clients feel comfortable expressing their ideas and
                   collaborating on their perfect piece.

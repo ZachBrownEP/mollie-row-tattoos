@@ -30,10 +30,10 @@ export default function ContactPage() {
                     <MapPin className="mt-1 h-5 w-5 text-primary" />
                     <div>
                       <h3 className="font-semibold">Address</h3>
-                      <p className="mt-1 text-muted-foreground">Phoenix, Arizona</p>
+                      <p className="mt-1 text-muted-foreground">2505 SE 11TH Portland, OR</p>
                       <Button variant="link" className="mt-2 h-auto p-0 text-primary hover:text-primary/80" asChild>
                         <a
-                          href="https://maps.google.com/?q=Phoenix,+Arizona"
+                          href="https://maps.google.com/?q=2505+SE+11TH+Portland,+OR"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -170,12 +170,12 @@ export default function ContactPage() {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <GoogleMap
                 apiKey="AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM"
-                address="Phoenix, Arizona"
+                address="2505 SE 11TH Portland, OR"
                 className="h-96"
               />
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-muted-foreground">Phoenix, Arizona</p>
+              <p className="text-sm text-muted-foreground">2505 SE 11TH Portland, OR</p>
             </div>
           </div>
         </div>

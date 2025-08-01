@@ -14,7 +14,7 @@ export default function ArtistsPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Meet Your Artist</h1>
-            <p className="text-lg">Schedule your consultation with Halee Hathaway</p>
+            <p className="text-lg">Schedule your consultation with Maureen Orrissim</p>
           </div>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function ArtistsPage() {
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-2 h-32 w-32 rounded-full overflow-hidden">
                     <Image
-                      src={`/artist-portraits/IMG_8600.png`}
+                      src={`/artist-portraits/Maureen.png`}
                       alt={artist.name}
                       width={200}
                       height={200}
@@ -136,15 +136,15 @@ export default function ArtistsPage() {
 }
 
 const artist = {
-  id: "halee",
-  name: "Halee Hathaway",
+  id: "maureen",
+  name: "Maureen Orrissim",
   title: "Tattoo Artist & Owner",
   specialties: ["Custom Designs", "Fine Line", "Artistic Tattoos", "Color Work"],
   rating: "4.9",
   reviews: "150+",
   experience: "10+ years experience",
   startingPrice: "150",
-  bio: "Halee Hathaway is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
+  bio: "Maureen Orrissim is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
   services: [
     "Custom Tattoo Designs",
     "Fine Line Work",

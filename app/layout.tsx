@@ -10,9 +10,9 @@ import ThemeSwitcher from "@/components/theme-switcher"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Sugs Tattoos - Phoenix's Premier Tattoo Artist",
+  title: "Sol De Noche Tatuajes - Portland's Premier Tattoo Artist",
   description:
-    "Professional tattoo artistry in Phoenix, Arizona. Custom tattoos and cover-ups by Halee Hathaway in a clean, safe environment.",
+    "Professional tattoo artistry in Portland, Oregon. Custom tattoos and cover-ups by Maureen Orrissim in a clean, safe environment.",
     generator: 'v0.dev'
 }
 
