@@ -24,19 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Clear any stored theme preference to ensure light mode
-            if (typeof window !== 'undefined') {
-              localStorage.removeItem('theme');
-            }
-          `
-        }} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light" disableTransitionOnChange>
+      <body className={`${inter.className} no-horizontal-scroll`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <SiteHeader />
-          {children}
+          <main className="relative pt-16">
+            {children}
+          </main>
           <ThemeSwitcher />
           <Toaster />
         </ThemeProvider>

@@ -19,6 +19,17 @@ interface Theme {
 
 const themes: Theme[] = [
   {
+    id: "default",
+    name: "Default (Black & White)",
+    description: "Classic black and white theme",
+    colors: ["#000000", "#404040", "#808080"],
+    cssVars: {
+      primary: "240 5.9% 10%",
+      primaryForeground: "0 0% 98%",
+      accent: "240 4.8% 95.9%",
+    },
+  },
+  {
     id: "ink-steel",
     name: "Sol De Noche Tatuajes",
     description: "Deep purples with metallic accents",
@@ -162,17 +173,6 @@ const themes: Theme[] = [
     },
   },
   {
-    id: "copper-bronze",
-    name: "Copper Bronze",
-    description: "Warm coppers with bronze highlights",
-    colors: ["#EA580C", "#FB923C", "#FED7AA"],
-    cssVars: {
-      primary: "20.5 90.2% 48.2%",
-      primaryForeground: "60 9.1% 97.8%",
-      accent: "20.5 90.2% 48.2%",
-    },
-  },
-  {
     id: "neon-green",
     name: "Neon Green",
     description: "Electric greens with bright energy",
@@ -242,14 +242,36 @@ const themes: Theme[] = [
 
 export default function ThemeSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
-  const [currentTheme, setCurrentTheme] = useState("ink-steel")
+  const [currentTheme, setCurrentTheme] = useState("default")
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    if (savedTheme) {
-      setCurrentTheme(savedTheme)
-      applyTheme(savedTheme)
+    // Always check localStorage on mount and reapply theme
+    const checkAndApplyTheme = () => {
+      const savedTheme = localStorage.getItem("color-theme")
+      if (savedTheme) {
+        setCurrentTheme(savedTheme)
+        applyTheme(savedTheme)
+      } else {
+        // Apply default theme on first load
+        setCurrentTheme("default")
+        applyTheme("default")
+        // Save default to localStorage
+        localStorage.setItem("color-theme", "default")
+      }
     }
+
+    checkAndApplyTheme()
+
+    // Listen for storage changes (in case of multiple tabs)
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "color-theme" && e.newValue) {
+        setCurrentTheme(e.newValue)
+        applyTheme(e.newValue)
+      }
+    }
+
+    window.addEventListener("storage", handleStorageChange)
+    return () => window.removeEventListener("storage", handleStorageChange)
   }, [])
 
   const applyTheme = (themeId: string) => {
@@ -260,12 +282,15 @@ export default function ThemeSwitcher() {
     root.style.setProperty("--primary", theme.cssVars.primary)
     root.style.setProperty("--primary-foreground", theme.cssVars.primaryForeground)
     root.style.setProperty("--accent", theme.cssVars.accent)
+    
+    // Set data attribute for theme-specific styling
+    root.setAttribute("data-theme", themeId)
   }
 
   const handleThemeChange = (themeId: string) => {
     setCurrentTheme(themeId)
     applyTheme(themeId)
-    localStorage.setItem("theme", themeId)
+    localStorage.setItem("color-theme", themeId)
     setIsOpen(false)
   }
 

@@ -1,3 +1,4 @@
+import React from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -140,54 +141,61 @@ const faqCategories = [
 
 export default function FAQPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about our tattoo services, process, and policies. Can't find what you're
-            looking for? Contact us directly.
-          </p>
+    <main className="flex min-h-screen flex-col">
+      {/* Header */}
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="heading-xl mb-6">Frequently Asked <span className="gradient-text">Questions</span></h1>
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Find answers to common questions about our tattoo services, process, and policies. Can't find what you're
+              looking for? Contact us directly.
+            </p>
+          </div>
         </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-12 lg:py-20">
+        <div className="max-w-6xl mx-auto">
         {/* Quick Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <Card className="text-center">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <Card className="text-center glass-effect border-primary/20 shadow-xl group card-hover">
             <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Clock className="w-6 h-6 text-primary" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-primary-foreground" />
               </div>
-              <CardTitle className="text-lg">Response Time</CardTitle>
+              <CardTitle className="text-xl mb-2">Response Time</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>We typically respond to inquiries within 24 hours during business days</CardDescription>
+              <CardDescription className="text-lg leading-relaxed">We typically respond to inquiries within 24 hours during business days</CardDescription>
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center glass-effect border-primary/20 shadow-xl group card-hover">
             <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <DollarSign className="w-6 h-6 text-primary" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-primary-foreground" />
               </div>
-              <CardTitle className="text-lg">Consultation</CardTitle>
+              <CardTitle className="text-xl mb-2">Free Consultation</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
-                Free consultations for all potential clients to discuss your tattoo ideas
+              <CardDescription className="text-lg leading-relaxed">
+                Complimentary consultations for all potential clients to discuss your tattoo ideas
               </CardDescription>
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center glass-effect border-primary/20 shadow-xl group card-hover">
             <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <MessageCircle className="w-6 h-6 text-primary" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="w-8 h-8 text-primary-foreground" />
               </div>
-              <CardTitle className="text-lg">Still Have Questions?</CardTitle>
+              <CardTitle className="text-xl mb-2">Still Have Questions?</CardTitle>
             </CardHeader>
             <CardContent>
-              <Button asChild>
+              <Button className="glow-effect hover:scale-105 transition-all duration-300" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </CardContent>
@@ -195,22 +203,25 @@ export default function FAQPage() {
         </div>
 
         {/* FAQ Categories */}
-        <div className="space-y-8">
+        <div className="space-y-12">
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <category.icon className="w-5 h-5 text-primary" />
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center">
+                    <category.icon className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <h2 className="heading-md">{category.title}</h2>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">{category.questions.length} questions</Badge>
                 </div>
-                <h2 className="text-2xl font-bold">{category.title}</h2>
-                <Badge variant="outline">{category.questions.length} questions</Badge>
+                <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
               </div>
 
-              <Accordion type="single" collapsible className="space-y-2">
+              <Accordion type="single" collapsible className="space-y-4">
                 {category.questions.map((faq, index) => (
-                  <AccordionItem key={index} value={`${categoryIndex}-${index}`} className="border rounded-lg px-4">
-                    <AccordionTrigger className="text-left hover:no-underline">{faq.question}</AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pb-4">{faq.answer}</AccordionContent>
+                  <AccordionItem key={index} value={`${categoryIndex}-${index}`} className="glass-effect border-primary/20 shadow-lg rounded-xl px-6 py-2 group">
+                    <AccordionTrigger className="text-left hover:no-underline text-lg font-semibold py-6 group-hover:text-primary transition-colors">{faq.question}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -219,25 +230,28 @@ export default function FAQPage() {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-16 text-center">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="pt-8 pb-8">
-              <h3 className="text-xl font-bold mb-4">Still have questions?</h3>
-              <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                Our team is here to help! Contact us for personalized answers to your tattoo questions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link href="/booking">Book Consultation</Link>
-                </Button>
+        <section className="mt-20">
+          <Card className="glass-effect border-primary/20 shadow-2xl bg-gradient-to-br from-primary/5 to-background">
+            <CardContent className="p-12 text-center">
+              <div className="max-w-2xl mx-auto">
+                <h3 className="heading-md mb-6">Still have <span className="gradient-text">questions?</span></h3>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  Our team is here to help! Contact us for personalized answers to your tattoo questions.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="px-8 py-4 glow-effect hover:scale-105 transition-all duration-300" asChild>
+                    <Link href="/contact">Contact Us</Link>
+                  </Button>
+                  <Button variant="outline" size="lg" className="px-8 py-4" asChild>
+                    <Link href="/booking">Book Consultation</Link>
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
-        </div>
+        </section>
       </div>
     </div>
+    </main>
   )
 }

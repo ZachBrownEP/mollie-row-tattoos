@@ -1,50 +1,67 @@
+import React from "react"
 import Link from "next/link"
-import { Clock, Star } from "lucide-react"
+import { Clock, Star, Zap, Palette, Shield } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 export default function ServicesPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Header */}
-      <section className="bg-black py-20 text-white">
-        <div className="container px-4 md:px-6">
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+        <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Our Services</h1>
-            <p className="text-lg">Professional tattoo artistry and body modification services</p>
+            <h1 className="heading-xl mb-6">Our <span className="gradient-text">Services</span></h1>
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">Professional tattoo artistry and body modification services</p>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-16">
+      <section className="py-12 lg:py-20">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-6xl">
-            {serviceCategories.map((category) => (
-              <div key={category.name} className="mb-12">
-                <h2 className="mb-6 text-2xl font-bold">{category.name}</h2>
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={category.name} className="mb-16 lg:mb-20">
+                <div className="text-center mb-12">
+                  <h2 className="heading-lg mb-4">
+                    {category.name === 'Tattoo Services' && 'Tattoo '}
+                    {category.name === 'Piercing Services' && 'Piercing '}
+                    {category.name === 'Consultation Services' && 'Consultation '}
+                    <span className="gradient-text">Services</span>
+                  </h2>
+                  <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
+                </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {category.services.map((service) => (
-                    <Card key={service.name} className="h-full">
-                      <CardHeader>
-                        <CardTitle className="flex items-center justify-between">
-                          <span>{service.name}</span>
-                          <span className="text-lg font-bold text-primary">${service.price}</span>
+                    <Card key={service.name} className="h-full glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <CardHeader className="relative z-10">
+                        <CardTitle className="flex items-start justify-between gap-4">
+                          <span className="text-lg font-semibold">{service.name}</span>
+                          <div className="text-right">
+                            <span className="text-xl font-bold text-primary">${service.price}</span>
+                            {service.popular && (
+                              <Badge className="ml-2 bg-primary/90 text-primary-foreground">
+                                <Star className="h-3 w-3 mr-1" />
+                                Popular
+                              </Badge>
+                            )}
+                          </div>
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="space-y-3">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Clock className="h-4 w-4" />
-                          <span>{service.duration}</span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{service.description}</p>
-                        {service.popular && (
-                          <div className="flex items-center gap-1">
-                            <Star className="h-4 w-4 text-yellow-500" />
-                            <span className="text-xs font-medium text-yellow-600">Most Popular</span>
+                      <CardContent className="space-y-4 relative z-10">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <Clock className="h-4 w-4 text-primary" />
                           </div>
-                        )}
+                          <span className="font-medium">{service.duration}</span>
+                        </div>
+                        <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -56,19 +73,25 @@ export default function ServicesPage() {
       </section>
 
       {/* Add-ons */}
-      <section className="bg-gray-50 py-16">
-        <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-6 text-center text-2xl font-bold">Additional Services</h2>
-            <div className="grid gap-4 md:grid-cols-2">
+      <section className="py-12 lg:py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center mb-12">
+              <h2 className="heading-lg mb-4">Additional <span className="gradient-text">Services</span></h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {addOnServices.map((service) => (
-                <Card key={service.name}>
-                  <CardContent className="flex items-center justify-between p-4">
-                    <div>
-                      <h3 className="font-semibold">{service.name}</h3>
-                      <p className="text-sm text-muted-foreground">{service.description}</p>
+                <Card key={service.name} className="glass-effect border-primary/20 shadow-lg group card-hover">
+                  <CardContent className="flex items-center justify-between p-6">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-2">{service.name}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                     </div>
-                    <span className="font-bold text-primary">${service.price}</span>
+                    <div className="ml-4">
+                      <span className="font-bold text-xl text-primary">${service.price}</span>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -78,13 +101,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16">
+      <section className="py-12 lg:py-20">
         <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Ready to Book?</h2>
-            <p className="mb-8 text-muted-foreground">Choose your artist and schedule your consultation today</p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <Link href="/artists">Book Your Artist</Link>
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="heading-lg mb-6">Ready to <span className="gradient-text">Book?</span></h2>
+            <p className="mb-8 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">Choose your artist and schedule your consultation today</p>
+            <Button size="lg" className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300" asChild>
+              <Link href="/booking">Book Your Consultation</Link>
             </Button>
           </div>
         </div>

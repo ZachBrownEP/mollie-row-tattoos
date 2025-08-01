@@ -1,3 +1,4 @@
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -29,55 +30,58 @@ const testimonials = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col no-horizontal-scroll">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-background via-background to-primary/5 py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <Badge variant="outline" className="w-fit">
-                  <Zap className="w-3 h-3 mr-1" />
+      <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+        <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center w-full max-h-full">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left hero-content flex flex-col justify-center">
+              <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                <Badge variant="outline" className="w-fit glass-effect border-primary/30 text-primary hover:glow-effect transition-all duration-300 mx-auto lg:mx-0">
+                  <Zap className="w-4 h-4 mr-2" />
                   Portland's Premier Tattoo Studio
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Where Art Meets <span className="text-primary">Skin</span>
+                <h1 className="heading-xl mobile-safe">
+                  Where Art Meets <span className="gradient-text">Skin</span>
                 </h1>
-                <p className="text-xl text-muted-foreground max-w-lg">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0 mobile-safe">
                   Your Vision, Our Craft. Experience premium tattoo artistry with Maureen Orrissim in a
                   clean, professional environment.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild className="text-lg px-8">
+                <Button size="lg" asChild className="text-lg px-10 py-4 glow-effect hover:scale-105 transition-all duration-300">
                   <Link href="/booking">Book Consultation</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="text-lg px-8 bg-transparent">
+                <Button size="lg" variant="outline" asChild className="text-lg px-10 py-4 glass-effect border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                   <Link href="/gallery">View Portfolio</Link>
                 </Button>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative flex items-center justify-center h-full">
+              <div className="aspect-square max-h-[70vh] w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/20">
                 <Image
                   src="/images/tattoo-studio-interior.jpg"
                   alt="Tattoo studio interior with flash art wall"
                   width={600}
                   height={600}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-background border rounded-xl p-4 shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-primary" />
+              <div className="absolute -bottom-8 -left-8 glass-effect rounded-2xl p-6 shadow-2xl border border-primary/20">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center glow-effect">
+                    <Award className="w-7 h-7 text-black" />
                   </div>
                   <div>
-                    <div className="font-semibold">Award Winning</div>
-                    <div className="text-sm text-muted-foreground">Portland's Best Tattoo Studio 2024</div>
+                    <div className="font-bold text-lg">Award Winning</div>
+                    <div className="text-sm text-primary">Portland's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -87,31 +91,36 @@ export default function HomePage() {
       </section>
 
       {/* Portfolio Preview */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Recent Work</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-16 lg:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12 lg:mb-20">
+            <h2 className="heading-lg mb-4 lg:mb-6">Recent <span className="gradient-text">Work</span></h2>
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Explore our latest tattoo creations and see the quality of our artistry
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 lg:gap-8 mb-12 lg:mb-16">
             {[
               { src: "/portfolio-images/IMG_8623.png", alt: "Custom tattoo artwork by Sol De Noche Tatuajes" },
               { src: "/portfolio-images/IMG_8628.png", alt: "Fine line tattoo work" },
               { src: "/portfolio-images/IMG_8633.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="overflow-hidden card-hover glass-effect border-primary/20 group">
                 <CardContent className="p-0">
-                  <div className="relative aspect-square">
+                  <div className="relative aspect-square overflow-hidden">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       width={400}
                       height={400}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                      <Badge className="bg-primary/90 text-black font-medium">View Details</Badge>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -119,7 +128,7 @@ export default function HomePage() {
           </div>
           
           <div className="text-center">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
               <Link href="/gallery">View Full Gallery</Link>
             </Button>
           </div>
@@ -127,50 +136,56 @@ export default function HomePage() {
       </section>
 
       {/* Artist Preview */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Meet Your Artist</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-16 lg:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-card/50 to-background" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12 lg:mb-20">
+            <h2 className="heading-lg mb-4 lg:mb-6">Meet Your <span className="gradient-text">Artist</span></h2>
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Dedicated to creating exceptional body art that tells your story
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">
-            <Card className="text-center border-0 shadow-lg">
-              <CardContent className="pt-4">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/artist-portraits/Maureen.png"
-                    alt="Maureen Orrissim"
-                    width={200}
-                    height={200}
-                    className="w-full h-full object-cover object-top"
-                  />
+          <div className="max-w-2xl mx-auto">
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl overflow-hidden group">
+              <CardContent className="pt-8 pb-8">
+                <div className="relative w-40 h-40 mx-auto mb-6">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary/80 p-1">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <Image
+                        src="/artist-portraits/Maureen.png"
+                        alt="Maureen Orrissim"
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 glow-effect" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Maureen Orrissim</h3>
-                <p className="text-primary font-medium mb-4">Artist & Owner</p>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="heading-md mb-2">Maureen Orrissim</h3>
+                <p className="text-primary font-semibold text-lg mb-6">Artist & Owner</p>
+                <p className="text-muted-foreground mb-8 text-lg leading-relaxed max-w-lg mx-auto">
                   Specializing in custom designs, fine line work, and artistic tattoos. Passionate about creating unique,
                   meaningful pieces for each client.
                 </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Custom Designs</Badge>
-                  <Badge variant="secondary">Fine Line</Badge>
-                  <Badge variant="secondary">Artistic Tattoos</Badge>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">Custom Designs</Badge>
+                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">Fine Line</Badge>
+                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">Artistic Tattoos</Badge>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="text-center mt-12 space-y-4">
-            <Button size="lg" asChild>
+          <div className="text-center mt-16 space-y-6">
+            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
               <Link href="/booking">Book a Consultation</Link>
             </Button>
             <div>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://www.instagram.com/sol.de.noche.tattoo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Instagram className="h-5 w-5" />
+              <Button size="lg" variant="outline" asChild className="px-10 py-4 glass-effect border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                <a href="https://www.instagram.com/sol.de.noche.tattoo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                  <Instagram className="h-6 w-6" />
                   <span>Follow @sol.de.noche.tattoo</span>
                 </a>
               </Button>
@@ -180,16 +195,17 @@ export default function HomePage() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="heading-lg mb-6">Our <span className="gradient-text">Services</span></h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               From custom tattoos to professional piercings, we offer a full range of body art services
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "Custom Tattoos",
@@ -212,15 +228,16 @@ export default function HomePage() {
                 price: "Free",
               },
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-lg">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
+              <Card key={index} className="card-hover glass-effect border-primary/20 group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-primary">{service.price}</span>
-                    <Button variant="outline" size="sm">
+                    <span className="font-bold text-primary text-lg">{service.price}</span>
+                    <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-300">
                       Learn More
                     </Button>
                   </div>
@@ -229,8 +246,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" asChild>
+          <div className="text-center mt-16">
+            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
               <Link href="/services">View All Services</Link>
             </Button>
           </div>
@@ -238,55 +255,59 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Sol De Noche Tatuajes?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="heading-lg mb-6">Why Choose <span className="gradient-text">Sol De Noche Tatuajes?</span></h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Palette className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-3 gap-10">
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardHeader className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                  <Palette className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle>Custom Artistry</CardTitle>
+                <CardTitle className="text-2xl font-semibold">Custom Artistry</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
+              <CardContent className="relative z-10">
+                <CardDescription className="text-lg leading-relaxed">
                   Every tattoo is a unique masterpiece. Our artists work closely with you to bring your vision to life
                   with exceptional detail and creativity.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-primary" />
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardHeader className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle>Safety First</CardTitle>
+                <CardTitle className="text-2xl font-semibold">Safety First</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
+              <CardContent className="relative z-10">
+                <CardDescription className="text-lg leading-relaxed">
                   We maintain the highest standards of cleanliness and safety. All equipment is sterilized, and we
                   follow strict health department guidelines.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-primary" />
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardHeader className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle>Expert Artists</CardTitle>
+                <CardTitle className="text-2xl font-semibold">Expert Artists</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
+              <CardContent className="relative z-10">
+                <CardDescription className="text-lg leading-relaxed">
                   Our team consists of award-winning artists with years of experience in various styles, from
                   traditional to photorealistic work.
                 </CardDescription>

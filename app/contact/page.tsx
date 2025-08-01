@@ -1,5 +1,6 @@
+import React from "react"
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, Navigation } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Navigation, Instagram } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,37 +8,42 @@ import GoogleMap from "@/google-map"
 
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col no-horizontal-scroll">
       {/* Header */}
-      <section className="bg-black py-20 text-white">
-        <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Contact Us</h1>
-            <p className="text-lg">Visit us or get in touch to schedule your consultation</p>
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="heading-xl mb-6 mobile-safe">Contact <span className="gradient-text">Us</span></h1>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mobile-safe">Visit us or get in touch to schedule your consultation</p>
           </div>
         </div>
       </section>
 
       {/* Contact Info */}
-      <section className="py-16">
+      <section className="py-12 lg:py-20">
         <div className="container px-4 md:px-6">
-          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-8 lg:gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-2xl font-bold">Visit Our Studio</h2>
+              <h2 className="heading-md mb-8">Visit Our <span className="gradient-text">Studio</span></h2>
               <div className="space-y-6">
-                <Card>
-                  <CardContent className="flex items-start gap-4 p-6">
-                    <MapPin className="mt-1 h-5 w-5 text-primary" />
-                    <div>
-                      <h3 className="font-semibold">Address</h3>
-                      <p className="mt-1 text-muted-foreground">2505 SE 11TH Portland, OR</p>
-                      <Button variant="link" className="mt-2 h-auto p-0 text-primary hover:text-primary/80" asChild>
+                <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
+                  <CardContent className="flex items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-base sm:text-lg mb-2">Address</h3>
+                      <p className="text-muted-foreground mb-4 text-sm sm:text-base lg:text-lg mobile-safe">2505 SE 11TH Portland, OR</p>
+                      <Button variant="outline" className="group/btn text-xs sm:text-sm" asChild>
                         <a
                           href="https://maps.google.com/?q=2505+SE+11TH+Portland,+OR"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="flex items-center gap-2"
                         >
-                          <Navigation className="mr-1 h-4 w-4" />
+                          <Navigation className="h-3 w-3 sm:h-4 sm:w-4 group-hover/btn:translate-x-1 transition-transform" />
                           Get Directions
                         </a>
                       </Button>
@@ -45,36 +51,46 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="flex items-start gap-4 p-6">
-                    <Phone className="mt-1 h-5 w-5 text-primary" />
-                    <div>
-                      <h3 className="font-semibold">Phone</h3>
-                      <p className="mt-1 text-muted-foreground">Call us to book or ask questions</p>
-                      <p className="text-lg font-semibold">(512) 555-0123</p>
+                <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
+                  <CardContent className="flex items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-base sm:text-lg mb-2">Phone</h3>
+                      <p className="text-muted-foreground mb-2 text-sm sm:text-base mobile-safe">Call us to book or ask questions</p>
+                      <a href="tel:+15125550123" className="text-lg sm:text-xl font-bold text-primary hover:text-primary/80 transition-colors mobile-safe">
+                        (512) 555-0123
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="flex items-start gap-4 p-6">
-                    <Mail className="mt-1 h-5 w-5 text-primary" />
-                    <div>
-                      <h3 className="font-semibold">Email</h3>
-                      <p className="mt-1 text-muted-foreground">Send us a message</p>
-                      <p className="text-lg font-semibold">info@sugstattoos.com</p>
+                <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
+                  <CardContent className="flex items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-base sm:text-lg mb-2">Email</h3>
+                      <p className="text-muted-foreground mb-2 text-sm sm:text-base mobile-safe">Send us a message</p>
+                      <a href="mailto:info@soldenochetatuajes.com" className="text-sm sm:text-base lg:text-xl font-bold text-primary hover:text-primary/80 transition-colors mobile-safe">
+                        info@soldenochetatuajes.com
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="flex items-start gap-4 p-6">
-                    <Clock className="mt-1 h-5 w-5 text-primary" />
-                    <div>
-                      <h3 className="font-semibold">Hours</h3>
-                      <div className="mt-1 space-y-1 text-sm text-muted-foreground">
-                        <p>Tuesday - Saturday: 12:00 PM - 8:00 PM</p>
-                        <p>Sunday - Monday: Closed</p>
+                <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
+                  <CardContent className="flex items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-base sm:text-lg mb-3">Hours</h3>
+                      <div className="space-y-2 text-muted-foreground">
+                        <p className="text-sm sm:text-base lg:text-lg mobile-safe">Tuesday - Saturday: <span className="font-semibold text-foreground">12:00 PM - 8:00 PM</span></p>
+                        <p className="text-sm sm:text-base lg:text-lg mobile-safe">Sunday - Monday: <span className="font-semibold text-primary">Closed</span></p>
                       </div>
                     </div>
                   </CardContent>
@@ -82,76 +98,88 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8">
-                <h3 className="mb-4 text-xl font-bold">Follow Us</h3>
-                <Card>
-                  <CardContent className="p-6">
-                    <p className="mb-4 text-sm text-muted-foreground">
-                      Stay updated with our latest work and announcements on Instagram.
-                    </p>
-                    <a href="https://www.instagram.com/sugs_/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-                      @sugs_ on Instagram
-                    </a>
+                <h3 className="heading-md mb-6 mobile-safe">Follow <span className="gradient-text">Us</span></h3>
+                <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="flex items-center gap-4 sm:gap-6">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Instagram className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="mb-4 text-muted-foreground leading-relaxed text-sm sm:text-base mobile-safe">
+                          Stay updated with our latest work and announcements on Instagram.
+                        </p>
+                        <Button variant="outline" size="sm" className="text-xs sm:text-sm" asChild>
+                          <a href="https://www.instagram.com/sol.de.noche.tattoo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <Instagram className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="mobile-safe">@sol.de.noche.tattoo</span>
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
             <div>
-              <h2 className="mb-6 text-2xl font-bold">Book a Consultation</h2>
-              <Card>
-                <CardContent className="p-6">
-                  <p className="mb-6">
+              <h2 className="heading-md mb-8 mobile-safe">Book a <span className="gradient-text">Consultation</span></h2>
+              <Card className="glass-effect border-primary/20 shadow-2xl mb-8">
+                <CardContent className="p-4 sm:p-6 lg:p-8">
+                  <p className="mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed mobile-safe">
                     Ready for your next tattoo? Choose your preferred artist and schedule your consultation. Our online
                     booking system will be available soon!
                   </p>
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg" asChild>
-                    <Link href="/artists">Choose Your Artist</Link>
+                  <Button className="w-full py-3 sm:py-4 glow-effect hover:scale-105 transition-all duration-300" size="lg" asChild>
+                    <Link href="/booking">Book Your Consultation</Link>
                   </Button>
                 </CardContent>
               </Card>
 
-              <div className="mt-8">
-                <h3 className="mb-4 text-xl font-bold">Walk-ins Welcome</h3>
-                <Card>
-                  <CardContent className="p-6">
-                    <p className="mb-4 text-sm text-muted-foreground">
+              <div>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 mobile-safe">Walk-ins Welcome</h3>
+                <Card className="glass-effect border-primary/20 shadow-2xl mb-8">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <p className="mb-6 text-sm sm:text-base text-muted-foreground leading-relaxed mobile-safe">
                       We welcome walk-in consultations based on availability. However, to guarantee your preferred time
                       and artist, we recommend booking in advance.
                     </p>
-                    <div className="space-y-2 text-sm">
-                      <p>
-                        <strong>Peak Hours:</strong> Evenings and weekends tend to be busier
-                      </p>
-                      <p>
-                        <strong>Best Times for Walk-ins:</strong> Weekday afternoons
-                      </p>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <p className="text-sm sm:text-base mobile-safe"><strong className="text-foreground">Peak Hours:</strong> <span className="text-muted-foreground">Evenings and weekends tend to be busier</span></p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <p className="text-sm sm:text-base mobile-safe"><strong className="text-foreground">Best Times for Walk-ins:</strong> <span className="text-muted-foreground">Weekday afternoons</span></p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              <div className="mt-8">
-                <h3 className="mb-4 text-xl font-bold">Policies</h3>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="space-y-3 text-sm text-muted-foreground">
+              <div>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 mobile-safe">Studio Policies</h3>
+                <Card className="glass-effect border-primary/20 shadow-2xl">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="space-y-6">
                       <div>
-                        <h4 className="font-semibold text-foreground">Deposit Policy</h4>
-                        <p>
-                          A $50 deposit is required to secure your appointment and will be applied to your final cost.
+                        <h4 className="font-bold text-base sm:text-lg mb-2 text-foreground mobile-safe">Deposit Policy</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mobile-safe">
+                          A $100 deposit is required to secure your appointment and will be applied to your final cost.
                         </p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">Payment</h4>
-                        <p>We accept cash, credit cards, and Venmo.</p>
+                        <h4 className="font-bold text-base sm:text-lg mb-2 text-foreground mobile-safe">Payment</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mobile-safe">We accept cash, credit cards, and Venmo.</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">Age Policy</h4>
-                        <p>Must be 18+ for tattoos.</p>
+                        <h4 className="font-bold text-base sm:text-lg mb-2 text-foreground mobile-safe">Age Policy</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mobile-safe">Must be 18+ for tattoos. Valid ID required.</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">Aftercare</h4>
-                        <p>Detailed aftercare instructions and products are provided with every tattoo.</p>
+                        <h4 className="font-bold text-base sm:text-lg mb-2 text-foreground mobile-safe">Aftercare</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mobile-safe">Detailed aftercare instructions and products are provided with every tattoo.</p>
                       </div>
                     </div>
                   </CardContent>
@@ -163,23 +191,23 @@ export default function ContactPage() {
       </section>
 
       {/* Google Map */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-6 text-center text-2xl font-bold">Find Us</h2>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <GoogleMap
-                apiKey="AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM"
-                address="2505 SE 11TH Portland, OR"
-                className="h-96"
-              />
+      <section className="py-12 lg:py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center mb-12">
+              <h2 className="heading-lg mb-4 mobile-safe">Find <span className="gradient-text">Us</span></h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
-            <div className="mt-4 text-center">
-              <p className="text-sm text-muted-foreground">2505 SE 11TH Portland, OR</p>
+            <div className="rounded-2xl overflow-hidden shadow-2xl glass-effect border border-primary/20">
+              <GoogleMap className="h-64 sm:h-80 md:h-96 lg:h-[500px]" />
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground font-medium mobile-safe">2505 SE 11TH Portland, OR</p>
             </div>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

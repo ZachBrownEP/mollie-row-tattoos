@@ -43,31 +43,42 @@ export default function BookingPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Book Your Consultation</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your tattoo journey? Fill out this detailed form and we'll get back to you within 24 hours to
-            schedule your consultation.
-          </p>
+    <main className="flex min-h-screen flex-col">
+      {/* Header */}
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="heading-xl mb-6">Book Your <span className="gradient-text">Consultation</span></h1>
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Ready to start your tattoo journey? Fill out this detailed form and we'll get back to you within 24 hours to
+              schedule your consultation.
+            </p>
+          </div>
         </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-12 lg:py-20">
+        <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Form */}
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Personal Information */}
-              <Card>
+              <Card className="glass-effect border-primary/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <User className="w-5 h-5 text-primary" />
-                    Personal Information
-                  </CardTitle>
-                  <CardDescription>
-                    We need your basic information to contact you and prepare for your consultation.
-                  </CardDescription>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <User className="w-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">Personal Information</CardTitle>
+                      <CardDescription className="text-base">
+                        We need your basic information to contact you and prepare for your consultation.
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -128,13 +139,17 @@ export default function BookingPage() {
               </Card>
 
               {/* Service Details */}
-              <Card>
+              <Card className="glass-effect border-primary/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MessageSquare className="w-5 h-5 text-primary" />
-                    Service Details
-                  </CardTitle>
-                  <CardDescription>Tell us about the tattoo or service you're interested in.</CardDescription>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="w-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">Service Details</CardTitle>
+                      <CardDescription className="text-base">Tell us about the tattoo or service you're interested in.</CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
@@ -238,15 +253,19 @@ export default function BookingPage() {
               </Card>
 
               {/* Health & Experience */}
-              <Card>
+              <Card className="glass-effect border-primary/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <AlertCircle className="w-5 h-5 text-primary" />
-                    Health & Experience
-                  </CardTitle>
-                  <CardDescription>
-                    This information helps us provide the best service and ensure your safety.
-                  </CardDescription>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <AlertCircle className="w-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">Health & Experience</CardTitle>
+                      <CardDescription className="text-base">
+                        This information helps us provide the best service and ensure your safety.
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
@@ -290,15 +309,19 @@ export default function BookingPage() {
               </Card>
 
               {/* Scheduling */}
-              <Card>
+              <Card className="glass-effect border-primary/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-primary" />
-                    Preferred Scheduling
-                  </CardTitle>
-                  <CardDescription>
-                    Let us know your availability preferences. We'll contact you to confirm exact times.
-                  </CardDescription>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Calendar className="w-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">Preferred Scheduling</CardTitle>
+                      <CardDescription className="text-base">
+                        Let us know your availability preferences. We'll contact you to confirm exact times.
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -333,12 +356,16 @@ export default function BookingPage() {
               </Card>
 
               {/* Additional Information */}
-              <Card>
+              <Card className="glass-effect border-primary/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Upload className="w-5 h-5 text-primary" />
-                    Additional Information
-                  </CardTitle>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Upload className="w-6 w-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">Additional Information</CardTitle>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-2">
@@ -367,7 +394,7 @@ export default function BookingPage() {
                 </CardContent>
               </Card>
 
-              <Button type="submit" size="lg" className="w-full">
+              <Button type="submit" size="lg" className="w-full py-4 glow-effect hover:scale-[1.02] transition-all duration-300">
                 Submit Consultation Request
               </Button>
             </form>
@@ -376,106 +403,112 @@ export default function BookingPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Process Info */}
-            <Card>
+            <Card className="glass-effect border-primary/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-lg">What Happens Next?</CardTitle>
+                <CardTitle className="text-xl mb-2">What Happens <span className="gradient-text">Next?</span></CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-primary">1</span>
+              <CardContent className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-primary-foreground">1</span>
                   </div>
                   <div>
-                    <h4 className="font-medium">Review</h4>
-                    <p className="text-sm text-muted-foreground">We review your request within 24 hours</p>
+                    <h4 className="font-semibold text-lg mb-1">Review</h4>
+                    <p className="text-muted-foreground">We review your request within 24 hours</p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-primary">2</span>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-primary-foreground">2</span>
                   </div>
                   <div>
-                    <h4 className="font-medium">Contact</h4>
-                    <p className="text-sm text-muted-foreground">We'll call or email to schedule your consultation</p>
+                    <h4 className="font-semibold text-lg mb-1">Contact</h4>
+                    <p className="text-muted-foreground">We'll call or email to schedule your consultation</p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-primary">3</span>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-primary-foreground">3</span>
                   </div>
                   <div>
-                    <h4 className="font-medium">Consult</h4>
-                    <p className="text-sm text-muted-foreground">Free consultation to discuss design and pricing</p>
+                    <h4 className="font-semibold text-lg mb-1">Consult</h4>
+                    <p className="text-muted-foreground">Free consultation to discuss design and pricing</p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-primary">4</span>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-primary-foreground">4</span>
                   </div>
                   <div>
-                    <h4 className="font-medium">Book</h4>
-                    <p className="text-sm text-muted-foreground">Schedule your tattoo with a $100 deposit</p>
+                    <h4 className="font-semibold text-lg mb-1">Book</h4>
+                    <p className="text-muted-foreground">Schedule your tattoo with a $100 deposit</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Contact Info */}
-            <Card>
+            <Card className="glass-effect border-primary/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-lg">Prefer to Call?</CardTitle>
+                <CardTitle className="text-xl mb-2">Prefer to <span className="gradient-text">Call?</span></CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-primary" />
+              <CardContent className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary-foreground" />
+                  </div>
                   <div>
-                    <p className="font-medium">(512) 555-0123</p>
-                    <p className="text-sm text-muted-foreground">Tue-Sat, 12PM-8PM</p>
+                    <p className="font-semibold text-lg">(512) 555-0123</p>
+                    <p className="text-muted-foreground">Tue-Sat, 12PM-8PM</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary-foreground" />
+                  </div>
                   <div>
-                    <p className="font-medium">info@inkandsteeltattoo.com</p>
-                    <p className="text-sm text-muted-foreground">24-48 hour response</p>
+                    <p className="font-semibold text-lg">info@soldenochetatuajes.com</p>
+                    <p className="text-muted-foreground">24-48 hour response</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Pricing Info */}
-            <Card>
+            <Card className="glass-effect border-primary/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  Pricing Guide
-                </CardTitle>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">Pricing <span className="gradient-text">Guide</span></CardTitle>
+                </div>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-sm">Small tattoos</span>
-                  <Badge variant="outline">$150-400</Badge>
+              <CardContent className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">Small tattoos</span>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">$150-400</Badge>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-sm">Medium tattoos</span>
-                  <Badge variant="outline">$400-800</Badge>
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">Medium tattoos</span>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">$400-800</Badge>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-sm">Large tattoos</span>
-                  <Badge variant="outline">$800+</Badge>
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">Large tattoos</span>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">$800+</Badge>
                 </div>
-                <Separator />
-                <div className="flex justify-between">
-                  <span className="text-sm">Consultation</span>
-                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                <Separator className="bg-primary/10" />
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">Consultation</span>
+                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 dark:bg-green-950 dark:text-green-400 dark:border-green-800">
                     Free
                   </Badge>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-sm">Booking deposit</span>
-                  <Badge variant="outline">$100</Badge>
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">Booking deposit</span>
+                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">$100</Badge>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">
+                <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
                   Final pricing depends on size, complexity, and placement. Deposit goes toward final cost.
                 </p>
               </CardContent>
@@ -484,5 +517,6 @@ export default function BookingPage() {
         </div>
       </div>
     </div>
+    </main>
   )
 }
