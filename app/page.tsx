@@ -32,11 +32,11 @@ export default function HomePage() {
   return (
     <div className="flex flex-col no-horizontal-scroll">
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center">
+      <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center py-8">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/10" />
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
-        <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center w-full max-h-full">
+        <div className="container mx-auto px-4 relative z-10 flex items-center">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center w-full">
             <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left hero-content flex flex-col justify-center">
               <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                 <Badge variant="outline" className="w-fit glass-effect border-primary/30 text-primary hover:glow-effect transition-all duration-300 mx-auto lg:mx-0">
@@ -52,18 +52,18 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild className="text-lg px-10 py-4 glow-effect hover:scale-105 transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <Button size="lg" asChild className="text-base sm:text-lg px-6 sm:px-10 py-4 glow-effect hover:scale-105 transition-all duration-300 flex-1 sm:flex-none">
                   <Link href="/booking">Book Consultation</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="text-lg px-10 py-4 glass-effect border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                <Button size="lg" variant="outline" asChild className="text-base sm:text-lg px-6 sm:px-10 py-4 glass-effect border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all duration-300 flex-1 sm:flex-none">
                   <Link href="/gallery">View Portfolio</Link>
                 </Button>
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center h-full">
-              <div className="aspect-square max-h-[70vh] w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/20">
+            <div className="relative flex items-center justify-center overflow-hidden">
+              <div className="aspect-square max-h-[60vh] w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/20">
                 <Image
                   src="/images/tattoo-studio-interior.jpg"
                   alt="Tattoo studio interior with flash art wall"
@@ -74,7 +74,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-8 -left-8 glass-effect rounded-2xl p-6 shadow-2xl border border-primary/20">
+              <div className="absolute bottom-4 left-4 glass-effect rounded-2xl p-4 shadow-2xl border border-primary/20 hidden sm:block">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center glow-effect">
                     <Award className="w-7 h-7 text-black" />

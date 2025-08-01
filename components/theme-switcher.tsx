@@ -272,24 +272,6 @@ export default function ThemeSwitcher() {
     return () => window.removeEventListener("storage", handleStorageChange)
   }, [])
 
-  // Handle body scroll locking when overlay is open
-  useEffect(() => {
-    if (isOpen) {
-      // Prevent body scroll when overlay is open
-      document.body.style.overflow = 'hidden'
-      document.body.style.touchAction = 'none'
-    } else {
-      // Re-enable body scroll when overlay is closed
-      document.body.style.overflow = ''
-      document.body.style.touchAction = ''
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = ''
-      document.body.style.touchAction = ''
-    }
-  }, [isOpen])
 
   const applyTheme = (themeId: string) => {
     const theme = themes.find((t) => t.id === themeId)
