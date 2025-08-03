@@ -14,7 +14,7 @@ export default function AftercarePage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="heading-xl mb-6">Tattoo <span className="gradient-text">Aftercare</span> Guide</h1>
+            <h1 className="heading-xl mb-6">Tattoo <span className="text-black">Aftercare</span> Guide</h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Proper aftercare is crucial for healing and maintaining the quality of your new tattoo. Follow these
               guidelines to ensure the best results.
@@ -41,7 +41,7 @@ export default function AftercarePage() {
           {/* Healing Timeline */}
           <section className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">Healing <span className="gradient-text">Timeline</span></h2>
+              <h2 className="heading-lg mb-4">Healing <span className="text-black">Timeline</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <div className="grid gap-6">
@@ -138,7 +138,7 @@ export default function AftercarePage() {
           {/* Do's and Don'ts */}
           <section className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">Do's and <span className="gradient-text">Don'ts</span></h2>
+              <h2 className="heading-lg mb-4">Do's and <span className="text-black">Don'ts</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -241,7 +241,7 @@ export default function AftercarePage() {
           {/* Warning Signs */}
           <section className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">When to <span className="gradient-text">Seek Help</span></h2>
+              <h2 className="heading-lg mb-4">When to <span className="text-black">Seek Help</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <Alert className="glass-effect border-red-500/20 shadow-xl bg-red-50/10 dark:bg-red-950/10">
@@ -289,7 +289,7 @@ export default function AftercarePage() {
           {/* Recommended Products */}
           <section className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">Recommended <span className="gradient-text">Products</span></h2>
+              <h2 className="heading-lg mb-4">Recommended <span className="text-black">Products</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -359,7 +359,7 @@ export default function AftercarePage() {
           {/* Long-term Care */}
           <section>
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">Long-term <span className="gradient-text">Tattoo Care</span></h2>
+              <h2 className="heading-lg mb-4">Long-term <span className="text-black">Tattoo Care</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <Card className="glass-effect border-primary/20 shadow-xl">

@@ -28,7 +28,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="heading-xl mb-6">Our <span className="gradient-text">Work</span></h1>
+            <h1 className="heading-xl mb-6">Our <span className="text-black">Work</span></h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">Showcasing the artistry and craftsmanship that defines Mollie Row Tattoos</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="heading-lg mb-6">Ready for Your <span className="gradient-text">Turn?</span></h2>
+            <h2 className="heading-lg mb-6">Ready for Your <span className="text-black">Turn?</span></h2>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Book your consultation and experience the artistry that our clients love
             </p>

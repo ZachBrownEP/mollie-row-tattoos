@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="heading-xl mb-6 mobile-safe">Contact <span className="gradient-text">Us</span></h1>
+            <h1 className="heading-xl mb-6 mobile-safe">Contact <span className="text-black">Us</span></h1>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mobile-safe">Visit us or get in touch to schedule your consultation</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function ContactPage() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto grid max-w-6xl gap-8 lg:gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="heading-md mb-8">Visit Our <span className="gradient-text">Studio</span></h2>
+              <h2 className="heading-md mb-8">Visit Our <span className="text-black">Studio</span></h2>
               <div className="space-y-6">
                 <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
                   <CardContent className="flex items-start gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
@@ -98,7 +98,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8">
-                <h3 className="heading-md mb-6 mobile-safe">Follow <span className="gradient-text">Us</span></h3>
+                <h3 className="heading-md mb-6 mobile-safe">Follow <span className="text-black">Us</span></h3>
                 <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
                   <CardContent className="p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-4 sm:gap-6">
@@ -123,7 +123,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="heading-md mb-8 mobile-safe">Book a <span className="gradient-text">Consultation</span></h2>
+              <h2 className="heading-md mb-8 mobile-safe">Book a <span className="text-black">Consultation</span></h2>
               <Card className="glass-effect border-primary/20 shadow-2xl mb-8">
                 <CardContent className="p-4 sm:p-6 lg:p-8">
                   <p className="mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed mobile-safe">
@@ -196,7 +196,7 @@ export default function ContactPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-5xl">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4 mobile-safe">Find <span className="gradient-text">Us</span></h2>
+              <h2 className="heading-lg mb-4 mobile-safe">Find <span className="text-black">Us</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl glass-effect border border-primary/20">

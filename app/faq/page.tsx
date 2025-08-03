@@ -148,7 +148,7 @@ export default function FAQPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="heading-xl mb-6">Frequently Asked <span className="gradient-text">Questions</span></h1>
+            <h1 className="heading-xl mb-6">Frequently Asked <span className="text-black">Questions</span></h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Find answers to common questions about our tattoo services, process, and policies. Can't find what you're
               looking for? Contact us directly.
@@ -234,7 +234,7 @@ export default function FAQPage() {
           <Card className="glass-effect border-primary/20 shadow-2xl bg-gradient-to-br from-primary/5 to-background">
             <CardContent className="p-12 text-center">
               <div className="max-w-2xl mx-auto">
-                <h3 className="heading-md mb-6">Still have <span className="gradient-text">questions?</span></h3>
+                <h3 className="heading-md mb-6">Still have <span className="text-black">questions?</span></h3>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   Our team is here to help! Contact us for personalized answers to your tattoo questions.
                 </p>

@@ -44,7 +44,7 @@ export default function HomePage() {
                   Asheville's Premier Tattoo Studio
                 </Badge>
                 <h1 className="heading-xl mobile-safe">
-                  Where Art Meets <span className="gradient-text">Skin</span>
+                  Where Art Meets <span className="text-black">Skin</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0 mobile-safe">
                   Your Vision, Our Craft. Experience premium tattoo artistry with Mollie Row in a
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 lg:mb-20">
-            <h2 className="heading-lg mb-4 lg:mb-6">Recent <span className="gradient-text">Work</span></h2>
+            <h2 className="heading-lg mb-4 lg:mb-6">Recent <span className="text-black">Work</span></h2>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Explore our latest tattoo creations and see the quality of our artistry
             </p>
@@ -136,7 +136,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-card/50 to-background" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 lg:mb-20">
-            <h2 className="heading-lg mb-4 lg:mb-6">Meet Your <span className="gradient-text">Artist</span></h2>
+            <h2 className="heading-lg mb-4 lg:mb-6">Meet Your <span className="text-black">Artist</span></h2>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Dedicated to creating exceptional body art that tells your story
             </p>
@@ -195,7 +195,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="heading-lg mb-6">Our <span className="gradient-text">Services</span></h2>
+            <h2 className="heading-lg mb-6">Our <span className="text-black">Services</span></h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               From custom tattoos to professional piercings, we offer a full range of body art services
             </p>
@@ -236,9 +236,15 @@ export default function HomePage() {
                       <span className="font-bold text-primary text-lg">{service.price}</span>
                     </div>
                     <div className="text-center">
-                      <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-300">
-                        Learn More
-                      </Button>
+                      {service.title === "Cover-ups" || service.title === "Consultations" ? (
+                        <Button variant="outline" size="sm" className="border-orange-500/50 bg-orange-500/20 text-pink-500 hover:bg-orange-500/30 hover:border-orange-500 transition-all duration-300">
+                          Learn More
+                        </Button>
+                      ) : (
+                        <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-300">
+                          Learn More
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </CardContent>
@@ -255,11 +261,11 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
-        <div className="container mx-auto px-4 relative z-10 overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="heading-lg mb-6">Why Choose <span className="gradient-text">Mollie Row Tattoos?</span></h2>
+            <h2 className="heading-lg mb-6">Why Choose <span className="text-black">Mollie Row Tattoos?</span></h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>

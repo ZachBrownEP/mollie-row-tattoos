@@ -16,7 +16,7 @@ export default function ArtistsPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="heading-xl mb-6">Meet Your <span className="gradient-text">Artist</span></h1>
+            <h1 className="heading-xl mb-6">Meet Your <span className="text-black">Artist</span></h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">Schedule your consultation with Mollie Row</p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function ArtistsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="heading-lg mb-12">Booking <span className="gradient-text">Information</span></h2>
+            <h2 className="heading-lg mb-12">Booking <span className="text-black">Information</span></h2>
             <div className="grid gap-6 md:grid-cols-2 mb-12">
               <Card className="glass-effect border-primary/20 shadow-2xl group card-hover">
                 <CardContent className="p-8">

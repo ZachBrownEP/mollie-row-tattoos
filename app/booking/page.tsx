@@ -50,7 +50,7 @@ export default function BookingPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="heading-xl mb-6">Book Your <span className="gradient-text">Consultation</span></h1>
+            <h1 className="heading-xl mb-6">Book Your <span className="text-black">Consultation</span></h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Ready to start your tattoo journey? Fill out this detailed form and we'll get back to you within 24 hours to
               schedule your consultation.
@@ -405,7 +405,7 @@ export default function BookingPage() {
             {/* Process Info */}
             <Card className="glass-effect border-primary/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-xl mb-2">What Happens <span className="gradient-text">Next?</span></CardTitle>
+                <CardTitle className="text-xl mb-2">What Happens <span className="text-black">Next?</span></CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex gap-4">
@@ -450,7 +450,7 @@ export default function BookingPage() {
             {/* Contact Info */}
             <Card className="glass-effect border-primary/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-xl mb-2">Prefer to <span className="gradient-text">Call?</span></CardTitle>
+                <CardTitle className="text-xl mb-2">Prefer to <span className="text-black">Call?</span></CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -481,7 +481,7 @@ export default function BookingPage() {
                   <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0">
                     <DollarSign className="w-5 h-5 text-primary-foreground" />
                   </div>
-                  <CardTitle className="text-xl">Pricing <span className="gradient-text">Guide</span></CardTitle>
+                  <CardTitle className="text-xl">Pricing <span className="text-black">Guide</span></CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">

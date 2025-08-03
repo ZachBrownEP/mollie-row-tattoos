@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="heading-xl mb-6">Our <span className="gradient-text">Services</span></h1>
+            <h1 className="heading-xl mb-6">Our <span className="text-black">Services</span></h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">Professional tattoo artistry and body modification services</p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function ServicesPage() {
                     {category.name === 'Tattoo Services' && 'Tattoo '}
                     {category.name === 'Piercing Services' && 'Piercing '}
                     {category.name === 'Consultation Services' && 'Consultation '}
-                    <span className="gradient-text">Services</span>
+                    <span className="text-black">Services</span>
                   </h2>
                   <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
                 </div>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-5xl">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-4">Additional <span className="gradient-text">Services</span></h2>
+              <h2 className="heading-lg mb-4">Additional <span className="text-black">Services</span></h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto" />
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
       <section className="py-12 lg:py-20">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="heading-lg mb-6">Ready to <span className="gradient-text">Book?</span></h2>
+            <h2 className="heading-lg mb-6">Ready to <span className="text-black">Book?</span></h2>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">Choose your artist and schedule your consultation today</p>
             <Button size="lg" className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300" asChild>
               <Link href="/booking">Book Your Consultation</Link>
