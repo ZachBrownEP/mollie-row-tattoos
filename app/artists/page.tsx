@@ -17,7 +17,7 @@ export default function ArtistsPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="heading-xl mb-6">Meet Your <span className="gradient-text">Artist</span></h1>
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">Schedule your consultation with Risa</p>
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">Schedule your consultation with Mollie Row</p>
           </div>
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function ArtistsPage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary/80 p-1">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <Image
-                        src={`/artist-portraits/Risa.png`}
+                        src={`/artist-portraits/Mollie.png`}
                         alt={artist.name}
                         width={200}
                         height={200}
@@ -143,15 +143,15 @@ export default function ArtistsPage() {
 }
 
 const artist = {
-  id: "risa",
-  name: "Risa",
+  id: "mollie-row",
+  name: "Mollie Row",
   title: "Tattoo Artist & Owner",
   specialties: ["Custom Designs", "Fine Line", "Artistic Tattoos", "Color Work"],
   rating: "4.9",
   reviews: "150+",
   experience: "10+ years experience",
   startingPrice: "150",
-  bio: "Risa is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
+  bio: "Mollie Row is passionate about creating unique, meaningful tattoos that tell each client's personal story. Her artistic approach and attention to detail ensure every piece is a one-of-a-kind work of art.",
   services: [
     "Custom Tattoo Designs",
     "Fine Line Work",

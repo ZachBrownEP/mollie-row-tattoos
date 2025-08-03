@@ -35,10 +35,10 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-bold text-base sm:text-lg mb-2">Address</h3>
-                      <p className="text-muted-foreground mb-4 text-sm sm:text-base lg:text-lg mobile-safe">271 W McMillan St Cincinnati, OH, United States</p>
+                      <p className="text-muted-foreground mb-4 text-sm sm:text-base lg:text-lg mobile-safe">Asheville, NC</p>
                       <Button variant="outline" className="group/btn text-xs sm:text-sm" asChild>
                         <a
-                          href="https://maps.google.com/?q=271+W+McMillan+St+Cincinnati,+OH,+United+States"
+                          href="https://maps.google.com/?q=Asheville,+NC"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2"
@@ -74,8 +74,8 @@ export default function ContactPage() {
                     <div className="flex-1 min-w-0">
                       <h3 className="font-bold text-base sm:text-lg mb-2">Email</h3>
                       <p className="text-muted-foreground mb-2 text-sm sm:text-base mobile-safe">Send us a message</p>
-                      <a href="mailto:info@risatattoos.com" className="text-sm sm:text-base lg:text-xl font-bold text-primary hover:text-primary/80 transition-colors mobile-safe">
-                        info@risatattoos.com
+                      <a href="mailto:info@mollierowtatoos.com" className="text-sm sm:text-base lg:text-xl font-bold text-primary hover:text-primary/80 transition-colors mobile-safe">
+                        info@mollierowtatoos.com
                       </a>
                     </div>
                   </CardContent>
@@ -110,9 +110,9 @@ export default function ContactPage() {
                           Stay updated with our latest work and announcements on Instagram.
                         </p>
                         <Button variant="outline" size="sm" className="text-xs sm:text-sm" asChild>
-                          <a href="https://www.instagram.com/bai.bai.bunni.tattoos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                          <a href="https://www.instagram.com/mollierowtattoos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                             <Instagram className="h-3 w-3 sm:h-4 sm:w-4" />
-                            <span className="mobile-safe">@bai.bai.bunni.tattoos</span>
+                            <span className="mobile-safe">@mollierowtattoos</span>
                           </a>
                         </Button>
                       </div>
@@ -203,7 +203,7 @@ export default function ContactPage() {
               <GoogleMap className="h-64 sm:h-80 md:h-96 lg:h-[500px]" />
             </div>
             <div className="mt-6 text-center">
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground font-medium mobile-safe">271 W McMillan St Cincinnati, OH, United States</p>
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground font-medium mobile-safe">Asheville, NC</p>
             </div>
           </div>
         </div>

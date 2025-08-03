@@ -10,10 +10,10 @@ import ThemeSwitcher from "@/components/theme-switcher"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Risa Tattoos - Cincinnati's Premier Tattoo Artist",
+  title: "Mollie Row Tattoos - Asheville's Premier Tattoo Artist",
   description:
-    "Professional tattoo artistry in Cincinnati, Ohio. Custom tattoos and cover-ups by Risa in a clean, safe environment.",
-    generator: 'v0.dev'
+    "Professional tattoo artistry in Asheville, North Carolina. Custom tattoos and cover-ups by Mollie Row in a clean, safe environment.",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

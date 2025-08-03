@@ -41,13 +41,13 @@ export default function HomePage() {
               <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                 <Badge variant="outline" className="w-fit glass-effect border-primary/30 text-primary hover:glow-effect transition-all duration-300 mx-auto lg:mx-0">
                   <Zap className="w-4 h-4 mr-2" />
-                  Cincinnati's Premier Tattoo Studio
+                  Asheville's Premier Tattoo Studio
                 </Badge>
                 <h1 className="heading-xl mobile-safe">
                   Where Art Meets <span className="gradient-text">Skin</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0 mobile-safe">
-                  Your Vision, Our Craft. Experience premium tattoo artistry with Risa in a
+                  Your Vision, Our Craft. Experience premium tattoo artistry with Mollie Row in a
                   clean, professional environment.
                 </p>
               </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-bold text-sm sm:text-lg">Award Winning</div>
-                    <div className="text-xs sm:text-sm text-primary">Cincinnati's Best Tattoo Studio 2024</div>
+                    <div className="text-xs sm:text-sm text-primary">Asheville's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -103,9 +103,9 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-4 lg:gap-8 mb-12 lg:mb-16">
             {[
-              { src: "/portfolio-images/IMG_8652.png", alt: "Custom tattoo artwork by Risa Tattoos" },
-              { src: "/portfolio-images/IMG_8654.png", alt: "Fine line tattoo work" },
-              { src: "/portfolio-images/IMG_8656.png", alt: "Artistic tattoo design" },
+              { src: "/portfolio-images/IMG_8731.png", alt: "Custom tattoo artwork by Mollie Row Tattoos" },
+              { src: "/portfolio-images/IMG_8732.png", alt: "Fine line tattoo work" },
+              { src: "/portfolio-images/IMG_8733.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
               <Card key={index} className="overflow-hidden  glass-effect border-primary/20 group">
                 <CardContent className="p-0">
@@ -117,10 +117,6 @@ export default function HomePage() {
                       height={400}
                       className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4">
-                      <Badge className="bg-primary/90 text-black font-medium">View Details</Badge>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -153,8 +149,8 @@ export default function HomePage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary/80 p-1">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <Image
-                        src="/artist-portraits/Risa.png"
-                        alt="Risa"
+                        src="/artist-portraits/Mollie.png"
+                        alt="Mollie Row"
                         width={200}
                         height={200}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
@@ -163,7 +159,7 @@ export default function HomePage() {
                   </div>
                   <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 glow-effect" />
                 </div>
-                <h3 className="heading-md mb-2">Risa</h3>
+                <h3 className="heading-md mb-2">Mollie Row</h3>
                 <p className="text-primary font-semibold text-lg mb-6">Artist & Owner</p>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed max-w-lg mx-auto">
                   Specializing in custom designs, fine line work, and artistic tattoos. Passionate about creating unique,
@@ -184,9 +180,9 @@ export default function HomePage() {
             </Button>
             <div>
               <Button size="lg" variant="outline" asChild className="px-10 py-4 border-2 border-black hover:bg-primary/10">
-                <a href="https://www.instagram.com/bai.bai.bunni.tattoos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                <a href="https://www.instagram.com/mollierowtattoos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <Instagram className="h-6 w-6" />
-                  <span>Follow @bai.bai.bunni.tattoos</span>
+                  <span>Follow @mollierowtattoos</span>
                 </a>
               </Button>
             </div>
@@ -263,7 +259,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
         <div className="container mx-auto px-4 relative z-10 overflow-hidden">
           <div className="text-center mb-20">
-            <h2 className="heading-lg mb-6">Why Choose <span className="gradient-text">Risa Tattoos?</span></h2>
+            <h2 className="heading-lg mb-6">Why Choose <span className="gradient-text">Mollie Row Tattoos?</span></h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We combine artistic excellence with the highest standards of safety and professionalism
             </p>
@@ -349,7 +345,7 @@ export default function HomePage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      271 W McMillan St Cincinnati, OH, United States
+                      Asheville, NC
                     </p>
                   </div>
                 </div>
@@ -376,7 +372,7 @@ export default function HomePage() {
                     <p className="text-muted-foreground">
                       Phone: (512) 555-0123
                       <br />
-                      Email: info@risatattoos.com
+                      Email: info@mollierowtatoos.com
                     </p>
                   </div>
                 </div>
@@ -403,10 +399,10 @@ export default function HomePage() {
             <div>
               <h3 className="mb-4 flex items-center text-xl font-bold">
                 <Zap className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-primary">Risa Tattoos</span>
+                <span className="text-primary">Mollie Row Tattoos</span>
               </h3>
               <p className="mb-2">Professional Tattoo Artistry</p>
-              <p className="mb-4">Cincinnati, OH</p>
+              <p className="mb-4">Asheville, NC</p>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Services</h3>
@@ -460,21 +456,21 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact</h3>
-              <p className="mb-2">271 W McMillan St Cincinnati, OH</p>
+              <p className="mb-2">Asheville, NC</p>
               <p className="mb-2">(512) 555-0123</p>
               <p className="mb-4">Hours: Tue-Sat 12PM-8PM</p>
               <div className="space-y-2">
                 <Link href="/contact" className="block text-primary hover:underline">
                   Get Directions
                 </Link>
-                <a href="https://www.instagram.com/bai.bai.bunni.tattoos" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                <a href="https://www.instagram.com/mollierowtattoos" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
                   Follow us on Instagram
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-8 border-t border-neutral-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} Risa Tattoos. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Mollie Row Tattoos. All rights reserved.</p>
           </div>
         </div>
       </footer>

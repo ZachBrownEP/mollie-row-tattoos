@@ -11,7 +11,7 @@ interface GoogleMapProps {
 
 export default function GoogleMap({
   apiKey = "AIzaSyCLemH2gsGIe3bFRKZ2jhpB1z6VCsNvXQM",
-  address = "271 W McMillan St Cincinnati, OH, United States",
+  address = "Asheville, NC",
   className = "h-96",
 }: GoogleMapProps) {
   const encodedAddress = encodeURIComponent(address)

@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="heading-xl mb-6 mobile-safe">About <span className="gradient-text">Us</span></h1>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mobile-safe">The story behind Risa Tattoos</p>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mobile-safe">The story behind Mollie Row Tattoos</p>
           </div>
         </div>
       </section>
@@ -26,8 +26,8 @@ export default function AboutPage() {
             <div className="mb-16 text-center">
               <h2 className="heading-lg mb-6 mobile-safe">Where Art Meets <span className="gradient-text">Skin</span></h2>
               <p className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto mobile-safe">
-                At Risa Tattoos, we believe that tattoos are more than just body art—they're personal
-                stories, memories, and expressions of identity. Located in the vibrant heart of Cincinnati, we've been
+                At Mollie Row Tattoos, we believe that tattoos are more than just body art—they're personal
+                stories, memories, and expressions of identity. Located in the vibrant heart of Asheville, we've been
                 serving the community with exceptional tattoo artistry and custom designs that
                 honor both traditional techniques and contemporary innovation.
               </p>
@@ -81,12 +81,12 @@ export default function AboutPage() {
               <h2 className="heading-md mb-8 text-center">Our <span className="gradient-text">Story</span></h2>
               <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Founded by Risa, Risa Tattoos was born from
+                  Founded by Mollie Row, Mollie Row Tattoos was born from
                   a vision of creating a space where artistry, professionalism, and client care converge. Our
                   name reflects our commitment to personal expression and artistic excellence.
                 </p>
                 <p>
-                  Risa brings diverse experience and specialties, from photorealistic portraits to bold
+                  Mollie Row brings diverse experience and specialties, from photorealistic portraits to bold
                   traditional work, ensuring that every client finds their perfect artistic match. We pride ourselves on
                   maintaining a sterile, welcoming environment where clients feel comfortable expressing their ideas and
                   collaborating on their perfect piece.
@@ -145,7 +145,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h2 className="heading-md mb-6">Ready to Create Something <span className="gradient-text">Amazing?</span></h2>
               <p className="mb-8 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Book your consultation today and discover why we're Cincinnati's premier tattoo studio.
+                Book your consultation today and discover why we're Asheville's premier tattoo studio.
               </p>
               <Button size="lg" className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300" asChild>
                 <Link href="/booking">Book Your Consultation</Link>

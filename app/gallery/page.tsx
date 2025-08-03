@@ -29,7 +29,7 @@ export default function GalleryPage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="heading-xl mb-6">Our <span className="gradient-text">Work</span></h1>
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">Showcasing the artistry and craftsmanship that defines Risa Tattoos</p>
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">Showcasing the artistry and craftsmanship that defines Mollie Row Tattoos</p>
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function GalleryPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Professional Tattoo Art</h3>
-                <p className="text-muted-foreground mb-4">Expert artistry by Risa at Risa Tattoos</p>
+                <p className="text-muted-foreground mb-4">Expert artistry by Mollie Row at Mollie Row Tattoos</p>
                 <Button className="w-full sm:w-auto" asChild>
                   <Link href="/booking">Book Similar Work</Link>
                 </Button>
@@ -148,17 +148,17 @@ export default function GalleryPage() {
 const galleryImages = [
   {
     id: 1,
-    src: "/portfolio-images/IMG_8652.png",
-    alt: "Custom tattoo artwork by Risa Tattoos",
+    src: "/portfolio-images/IMG_8731.png",
+    alt: "Custom tattoo artwork by Mollie Row Tattoos",
   },
   {
     id: 2,
-    src: "/portfolio-images/IMG_8654.png",
+    src: "/portfolio-images/IMG_8732.png",
     alt: "Fine line tattoo work",
   },
   {
     id: 3,
-    src: "/portfolio-images/IMG_8656.png",
+    src: "/portfolio-images/IMG_8733.png",
     alt: "Artistic tattoo design",
   },
 ]

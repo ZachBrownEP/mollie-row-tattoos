@@ -30,8 +30,19 @@ const themes: Theme[] = [
     },
   },
   {
+    id: "pink-orange",
+    name: "Pink & Orange",
+    description: "Bold dual-tone with vibrant pink and electric orange",
+    colors: ["#FF1493", "#FF6600", "#FFB347"],
+    cssVars: {
+      primary: "328 100% 54%",
+      primaryForeground: "0 0% 98%",
+      accent: "24 100% 50%",
+    },
+  },
+  {
     id: "ink-steel",
-    name: "Risa Tattoos",
+    name: "Mollie Row Tattoos",
     description: "Deep purples with metallic accents",
     colors: ["#8B5CF6", "#A855F7", "#C084FC"],
     cssVars: {
@@ -279,6 +290,11 @@ export default function ThemeSwitcher() {
 
     const root = document.documentElement
     
+    // Clear any existing custom properties first
+    root.style.removeProperty("--primary")
+    root.style.removeProperty("--primary-foreground")
+    root.style.removeProperty("--accent")
+    
     // Only apply custom CSS properties for non-default themes
     if (themeId !== "default") {
       root.style.setProperty("--primary", theme.cssVars.primary)
@@ -286,12 +302,11 @@ export default function ThemeSwitcher() {
       root.style.setProperty("--accent", theme.cssVars.accent)
       root.setAttribute("data-theme", themeId)
     } else {
-      // For default theme, remove custom properties to let CSS defaults work
-      root.style.removeProperty("--primary")
-      root.style.removeProperty("--primary-foreground")
-      root.style.removeProperty("--accent")
       root.setAttribute("data-theme", "default")
     }
+    
+    // Force reflow to ensure changes are applied
+    root.offsetHeight
   }
 
   const handleThemeChange = (themeId: string) => {

@@ -290,4 +290,90 @@ body {
     line-height: 1.3;
     word-break: break-word;
   }
+
+  /* Pink & Orange Dual Theme */
+  [data-theme="pink-orange"] {
+    --primary: 328 100% 54%; /* Pink */
+    --primary-foreground: 0 0% 98%;
+    --accent: 24 100% 50%; /* Orange */
+  }
+
+  [data-theme="pink-orange"] .gradient-text {
+    @apply bg-gradient-to-r from-pink-500 via-orange-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Alternate pink and orange for different elements */
+  [data-theme="pink-orange"] button:nth-child(odd),
+  [data-theme="pink-orange"] .btn-primary:nth-child(odd) {
+    background-color: hsl(328 100% 54%); /* Pink */
+  }
+
+  [data-theme="pink-orange"] button:nth-child(even),
+  [data-theme="pink-orange"] .btn-primary:nth-child(even) {
+    background-color: hsl(24 100% 50%); /* Orange */
+  }
+
+  [data-theme="pink-orange"] .badge:nth-child(odd) {
+    background-color: hsl(328 100% 54%); /* Pink */
+    color: hsl(0 0% 98%);
+  }
+
+  [data-theme="pink-orange"] .badge:nth-child(even) {
+    background-color: hsl(24 100% 50%); /* Orange */
+    color: hsl(0 0% 98%);
+  }
+
+  [data-theme="pink-orange"] .text-primary:nth-child(odd) {
+    color: hsl(328 100% 54%) !important; /* Pink */
+  }
+
+  [data-theme="pink-orange"] .text-primary:nth-child(even) {
+    color: hsl(24 100% 50%) !important; /* Orange */
+  }
+
+  [data-theme="pink-orange"] .border-primary:nth-child(odd) {
+    border-color: hsl(328 100% 54%); /* Pink */
+  }
+
+  [data-theme="pink-orange"] .border-primary:nth-child(even) {
+    border-color: hsl(24 100% 50%); /* Orange */
+  }
+
+  [data-theme="pink-orange"] .glow-effect:nth-child(odd) {
+    box-shadow: 0 0 20px hsl(328 100% 54% / 0.4); /* Pink glow */
+  }
+
+  [data-theme="pink-orange"] .glow-effect:nth-child(even) {
+    box-shadow: 0 0 20px hsl(24 100% 50% / 0.4); /* Orange glow */
+  }
+
+  /* Pink & Orange Background Gradients */
+  [data-theme="pink-orange"] .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, hsl(328 100% 54% / 0.1), hsl(24 100% 50% / 0.1)) !important;
+  }
+
+  [data-theme="pink-orange"] .bg-gradient-to-r {
+    background: linear-gradient(to right, hsl(328 100% 54% / 0.05), hsl(24 100% 50% / 0.05)) !important;
+  }
+
+  [data-theme="pink-orange"] .bg-gradient-to-b {
+    background: linear-gradient(to bottom, hsl(328 100% 54% / 0.05), hsl(24 100% 50% / 0.05)) !important;
+  }
+
+  [data-theme="pink-orange"] .bg-gradient-to-t {
+    background: linear-gradient(to top, hsl(328 100% 54% / 0.3), transparent, hsl(24 100% 50% / 0.3)) !important;
+  }
+
+  [data-theme="pink-orange"] .from-primary\/10 {
+    background: linear-gradient(135deg, hsl(328 100% 54% / 0.1), hsl(24 100% 50% / 0.1)) !important;
+  }
+
+  [data-theme="pink-orange"] .via-primary\/5 {
+    background: linear-gradient(90deg, transparent, hsl(328 100% 54% / 0.05), hsl(24 100% 50% / 0.05), transparent) !important;
+  }
+
+  [data-theme="pink-orange"] .from-card\/30 {
+    background: linear-gradient(135deg, hsl(328 100% 54% / 0.15), hsl(24 100% 50% / 0.15)) !important;
+  }
+
 }
