@@ -54,12 +54,12 @@ export default function ArtistsPage() {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center justify-center gap-3">
                     <Clock className="h-5 w-5 text-primary" />
                     <span className="text-sm font-medium">{artist.experience}</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center gap-3">
                     <Palette className="h-5 w-5 text-primary" />
                     <span className="text-sm font-medium">Starting at ${artist.startingPrice}/hour</span>
                   </div>

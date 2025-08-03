@@ -74,14 +74,14 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-              <div className="absolute bottom-4 left-4 glass-effect rounded-2xl p-4 shadow-2xl border border-primary/20 hidden sm:block">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center glow-effect">
-                    <Award className="w-7 h-7 text-black" />
+              <div className="absolute bottom-4 left-2 sm:left-4 glass-effect rounded-2xl p-2 sm:p-4 shadow-2xl border border-primary/20">
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center glow-effect">
+                    <Award className="w-5 h-5 sm:w-7 sm:h-7 text-black" />
                   </div>
                   <div>
-                    <div className="font-bold text-lg">Award Winning</div>
-                    <div className="text-sm text-primary">Cincinnati's Best Tattoo Studio 2024</div>
+                    <div className="font-bold text-sm sm:text-lg">Award Winning</div>
+                    <div className="text-xs sm:text-sm text-primary">Cincinnati's Best Tattoo Studio 2024</div>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
               { src: "/portfolio-images/IMG_8654.png", alt: "Fine line tattoo work" },
               { src: "/portfolio-images/IMG_8656.png", alt: "Artistic tattoo design" },
             ].map((image, index) => (
-              <Card key={index} className="overflow-hidden card-hover glass-effect border-primary/20 group">
+              <Card key={index} className="overflow-hidden  glass-effect border-primary/20 group">
                 <CardContent className="p-0">
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -118,7 +118,7 @@ export default function HomePage() {
                       className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                    <div className="absolute bottom-4 left-4">
                       <Badge className="bg-primary/90 text-black font-medium">View Details</Badge>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export default function HomePage() {
           </div>
           
           <div className="text-center">
-            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
+            <Button size="lg" asChild className="px-12 py-4 glow-effect ">
               <Link href="/gallery">View Full Gallery</Link>
             </Button>
           </div>
@@ -179,11 +179,11 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-16 space-y-6">
-            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
+            <Button size="lg" asChild className="px-12 py-4 glow-effect ">
               <Link href="/booking">Book a Consultation</Link>
             </Button>
             <div>
-              <Button size="lg" variant="outline" asChild className="px-10 py-4 glass-effect border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+              <Button size="lg" variant="outline" asChild className="px-10 py-4 border-2 border-black hover:bg-primary/10">
                 <a href="https://www.instagram.com/bai.bai.bunni.tattoos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <Instagram className="h-6 w-6" />
                   <span>Follow @bai.bai.bunni.tattoos</span>
@@ -214,7 +214,7 @@ export default function HomePage() {
               },
               {
                 title: "Cover-ups",
-                description: "Transform old tattoos into new masterpieces",
+                description: "Transform old tattoos into masterpieces",
                 price: "Starting at $200",
               },
               {
@@ -228,18 +228,22 @@ export default function HomePage() {
                 price: "Free",
               },
             ].map((service, index) => (
-              <Card key={index} className="card-hover glass-effect border-primary/20 group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <Card key={index} className="glass-effect border-primary/20 group hover:scale-105 transition-transform duration-300 relative overflow-hidden text-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-primary text-lg">{service.price}</span>
-                    <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-300">
-                      Learn More
-                    </Button>
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <span className="font-bold text-primary text-lg">{service.price}</span>
+                    </div>
+                    <div className="text-center">
+                      <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-300">
+                        Learn More
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -247,7 +251,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-16">
-            <Button size="lg" asChild className="px-12 py-4 glow-effect hover:scale-105 transition-all duration-300">
+            <Button size="lg" asChild className="px-12 py-4 glow-effect ">
               <Link href="/services">View All Services</Link>
             </Button>
           </div>
@@ -255,9 +259,9 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 relative">
+      <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-background" />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 overflow-hidden">
           <div className="text-center mb-20">
             <h2 className="heading-lg mb-6">Why Choose <span className="gradient-text">Risa Tattoos?</span></h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -266,10 +270,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardHeader className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect ">
                   <Palette className="w-10 h-10 text-black" />
                 </div>
                 <CardTitle className="text-2xl font-semibold">Custom Artistry</CardTitle>
@@ -282,10 +286,10 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardHeader className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect ">
                   <Shield className="w-10 h-10 text-black" />
                 </div>
                 <CardTitle className="text-2xl font-semibold">Safety First</CardTitle>
@@ -298,10 +302,10 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center glass-effect border-primary/20 shadow-2xl group card-hover relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Card className="text-center glass-effect border-primary/20 shadow-2xl group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardHeader className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 glow-effect ">
                   <Award className="w-10 h-10 text-black" />
                 </div>
                 <CardTitle className="text-2xl font-semibold">Expert Artists</CardTitle>
@@ -385,7 +389,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="lg:sticky lg:top-8">
+            <div>
               <GoogleMap />
             </div>
           </div>
